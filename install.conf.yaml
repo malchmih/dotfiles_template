@@ -1,3 +1,7 @@
-- clean: []
-- link: {}
-- shell: []
+- clean: ['~']
+- link:
+  ~/.vimrc: vimrc
+- shell:
+  -
+    - git update-submodules
+    - Installing/updating submodules
