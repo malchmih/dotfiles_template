@@ -1,7 +1,10 @@
 - clean: ['~']
 - link:
-  ~/.vimrc: vimrc
+    ~/.vimrc: vimrc
+    ~/.config/fish/config.fish
+      create: true
+      path: config.fish
 - shell:
   -
-    - git update-submodules
+    - git submodule update --init --recursive
     - Installing/updating submodules
