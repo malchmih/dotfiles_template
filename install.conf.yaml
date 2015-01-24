@@ -4,6 +4,7 @@
     ~/.config/fish/config.fish:
       create: true
       path: config.fish
+    ~/.ideavimrc: ideavimrc
 - shell:
   -
     - git submodule update --init --recursive
