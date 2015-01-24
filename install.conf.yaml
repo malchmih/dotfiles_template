@@ -5,6 +5,9 @@
       create: true
       path: config.fish
     ~/.ideavimrc: ideavimrc
+    ~/.lein/profiles.clj:
+      create: true
+      path: profiles.clj
 - shell:
   -
     - git submodule update --init --recursive
