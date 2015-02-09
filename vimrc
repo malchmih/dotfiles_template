@@ -58,7 +58,7 @@ noremap <left> <nop>
 noremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
-inoremap jk <ESC>
+inoremap fd <ESC>
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap j gj
