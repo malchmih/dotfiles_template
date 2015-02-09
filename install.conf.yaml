@@ -8,6 +8,7 @@
     ~/.lein/profiles.clj:
       create: true
       path: profiles.clj
+    ~/.spacemacs: .spacemacs
 - shell:
   -
     - git submodule update --init --recursive
