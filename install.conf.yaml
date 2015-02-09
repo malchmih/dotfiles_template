@@ -9,6 +9,9 @@
       create: true
       path: profiles.clj
     ~/.spacemacs: .spacemacs
+    ~/.emacs.d/private/user:
+      create: true
+      path: spacemacs-user/
 - shell:
   -
     - git submodule update --init --recursive
