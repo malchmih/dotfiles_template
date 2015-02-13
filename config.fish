@@ -1,4 +1,6 @@
 set -g -x PATH $PATH /usr/local/bin
+set -x PATH /home/mma/.linuxbrew/bin $PATH
+
 # Path to your oh-my-fish.
 set fish_path $HOME/.oh-my-fish
 
