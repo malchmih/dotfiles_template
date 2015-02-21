@@ -10,7 +10,12 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '()
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(user scala git themes-megapack)
+ dotspacemacs-configuration-layers '(
+                                     user
+                                     scala
+                                     git
+                                     ;; themes-megapack
+                                     )
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -28,8 +33,8 @@
  ;; Press <SPC> T n to cycle to the next theme in the list (works great
  ;; with 2 themes variants, one dark and one light)
  dotspacemacs-themes '(
-                       zenburn
                        solarized-dark
+                       zenburn
                        wombat
                        base16-default
                        base16-monokai
