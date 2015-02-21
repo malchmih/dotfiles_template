@@ -10,7 +10,7 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '()
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '(scala git themes-megapack user)
+ dotspacemacs-configuration-layers '(user scala git themes-megapack)
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -27,9 +27,18 @@
  ;; List of themes, the first of the list is loaded when spacemacs starts.
  ;; Press <SPC> T n to cycle to the next theme in the list (works great
  ;; with 2 themes variants, one dark and one light)
- dotspacemacs-themes '(sanityinc-solarized-dark
+ dotspacemacs-themes '(
+                       solarized-dark
+                       zenburn
+                       wombat
+                       base16-default
+                       base16-monokai
                        base16-ocean
-                       zenburn)
+                       fogus
+                       bubbleberry
+                       underwater
+                       sanityinc-tomorrow-night
+                       )
  ;; Default font. The powerline-offset allows to quickly tweak the mode-line
  ;; size to make separators look not too crappy.
  dotspacemacs-default-font '("Source Code Pro"
@@ -51,7 +60,7 @@
  ;; the commands bound to the current keystrokes.
  dotspacemacs-guide-key-delay 0.4
  ;; If non nil the frame is fullscreen when Emacs starts up (Emacs 24.4+ only).
- dotspacemacs-fullscreen-at-startup nil
+ dotspacemacs-fullscreen-at-startup t
  ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
  ;; Use to disable fullscreen animations in OSX."
  dotspacemacs-fullscreen-use-non-native nil
@@ -75,7 +84,7 @@
  ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
  dotspacemacs-smartparens-strict-mode nil
  ;; If non nil advises quit functions to keep server open when quitting.
- dotspacemacs-persistent-server nil
+ dotspacemacs-persistent-server t
  ;; The default package repository used if no explicit repository has been
  ;; specified with an installed package.
  ;; Not used for now.
