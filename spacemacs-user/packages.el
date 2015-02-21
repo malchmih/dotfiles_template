@@ -13,7 +13,7 @@
 (defvar user-packages
   '(
     ;; package users go here
-    ensime
+    solarized-theme
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -22,16 +22,6 @@ which require an initialization must be listed explicitly in the list.")
   "List of packages to exclude.")
 
 (defun user/init-ensime ()
-  (use-package ensime
-    :commands (ensime-mode)
-    :config
-    (progn
-      (spacemacs/declare-prefix "d" "ensime")
-      (evil-leader/set-key
-        "ds" 'ensime-sbt-switch
-        "de" 'ensime)
-    )
-  )
 )
 ;; For each package, define a function user/init-<package-user>
 ;;
