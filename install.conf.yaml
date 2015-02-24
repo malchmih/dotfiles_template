@@ -1,4 +1,6 @@
 - clean: ['~']
+- shell:
+  - [git submodule update --init --recursive, Installing/updating submodules]
 - link:
     ~/.vimrc: vimrc
     ~/.config/fish/config.fish:
@@ -9,13 +11,12 @@
       create: true
       path: profiles.clj
     ~/.spacemacs: .spacemacs
+    ~/.emacs.d:
+      create: true
+      path: spacemacs/
     ~/.emacs.d/private/user:
       create: true
       path: spacemacs-user/
     ~/.sbt/0.13/plugins/plugins.sbt:
       create: true
       path: plugins.sbt
-- shell:
-  -
-    - git submodule update --init --recursive
-    - Installing/updating submodules
