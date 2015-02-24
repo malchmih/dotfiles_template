@@ -12,6 +12,9 @@
     ~/.emacs.d/private/user:
       create: true
       path: spacemacs-user/
+    ~/.sbt/0.13/plugins/plugins.sbt:
+      create: true
+      path: plugins.sbt
 - shell:
   -
     - git submodule update --init --recursive
