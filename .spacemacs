@@ -60,7 +60,7 @@
  ;; the commands bound to the current keystrokes.
  dotspacemacs-guide-key-delay 0.4
  ;; If non nil the frame is fullscreen when Emacs starts up (Emacs 24.4+ only).
- dotspacemacs-fullscreen-at-startup t
+ dotspacemacs-fullscreen-at-startup nil
  ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
  ;; Use to disable fullscreen animations in OSX."
  dotspacemacs-fullscreen-use-non-native nil
