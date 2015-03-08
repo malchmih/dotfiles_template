@@ -16,7 +16,6 @@
                                        git
                                        dash
                                        themes-megapack
-                                       ace-window
                                        )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -111,6 +110,9 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (setq-default
+   flycheck-scalastyle-jar "/Users/malch/.scalastyle/scalastyle_2.11-0.6.0-batch.jar"
+   flycheck-scalastylerc "scalastyle-config.xml")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
