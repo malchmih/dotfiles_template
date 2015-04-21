@@ -4,9 +4,6 @@ set -x PATH /home/mma/.linuxbrew/bin $PATH
 # Path to your oh-my-fish.
 set fish_path $HOME/.oh-my-fish
 
-# Add alias for hub
-eval (hub alias -s)
-
 # Theme
 # set fish_theme robbyrussell
 # set fish_theme agnoster
