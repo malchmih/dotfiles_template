@@ -13,6 +13,7 @@
    dotspacemacs-configuration-layers '(
                                        user
                                        scala
+                                       clojure
                                        git
                                        dash
                                        themes-megapack
