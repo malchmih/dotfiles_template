@@ -11,16 +11,17 @@
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers '(
-                                       user
-                                       scala
-                                       clojure
-                                       git
-                                       dash
-                                       themes-megapack
-                                       html
-                                       org
-                                       syntax-checking
-                                       )
+     auto-completion
+     user
+     scala
+     clojure
+     git
+     dash
+     themes-megapack
+     html
+     org
+     syntax-checking
+     )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
