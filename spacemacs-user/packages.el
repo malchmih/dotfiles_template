@@ -14,6 +14,8 @@
   '(
     ;; package users go here
     solarized-theme
+    cider
+    monokai
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -21,8 +23,17 @@ which require an initialization must be listed explicitly in the list.")
 (defvar user-excluded-packages '()
   "List of packages to exclude.")
 
-(defun user/init-ensime ()
-)
+(defun user/init-cider ()
+  (use-package cider
+    :defer t
+    :config
+    (progn
+      (defun cider-project-reset ()
+        (interactive)
+        (cider-interactive-eval "(reloaded.repl/reset)"))
+      (evil-leader/set-key-for-mode 'clojure-mode
+        "mj" 'cider-project-reset))))
+
 ;; For each package, define a function user/init-<package-user>
 ;;
 ;; (defun user/init-my-package ()

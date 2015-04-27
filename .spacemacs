@@ -48,6 +48,7 @@ before layers configuration."
                          zenburn
                          sanityinc-solarized-dark
                          solarized-dark
+                         monokai
                          base16-ocean
                          sanityinc-tomorrow-night
                          )
