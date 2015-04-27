@@ -47,6 +47,7 @@ before layers configuration."
    dotspacemacs-themes '(
                          zenburn
                          sanityinc-solarized-dark
+                         solarized-dark
                          base16-ocean
                          sanityinc-tomorrow-night
                          )
@@ -109,6 +110,7 @@ before layers configuration."
    ;; Not used for now.
    dotspacemacs-default-package-repository nil)
   ;; User initialization goes here
+  (setq clojure-enable-fancify-symbols t)
   )
 
 (defun dotspacemacs/config ()
