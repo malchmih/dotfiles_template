@@ -47,10 +47,11 @@ before layers configuration."
    dotspacemacs-themes '(
                          zenburn
                          sanityinc-solarized-dark
-                         solarized-dark
+                         solarized-light
                          monokai
-                         base16-ocean
+                         base16-ocean-dark
                          sanityinc-tomorrow-night
+                         wombat
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -112,15 +113,15 @@ before layers configuration."
    dotspacemacs-default-package-repository nil)
   ;; User initialization goes here
   (setq clojure-enable-fancify-symbols t)
+  (setq-default dotspacemacs-configuration-layers
+                '(auto-completion :variables
+                                  auto-completion-enable-company-help-tooltip t))
   )
 
 (defun dotspacemacs/config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (setq-default
-   flycheck-scalastyle-jar "/Users/malch/.scalastyle/scalastyle_2.11-0.6.0-batch.jar"
-   flycheck-scalastylerc "scalastyle-config.xml")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
