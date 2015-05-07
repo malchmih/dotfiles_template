@@ -56,6 +56,8 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+noremap <C-Right> <nop>
+noremap <C-Left> <nop>
 nnoremap j gj
 nnoremap k gk
 inoremap fd <ESC>
