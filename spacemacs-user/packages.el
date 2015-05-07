@@ -32,7 +32,10 @@ which require an initialization must be listed explicitly in the list.")
         (interactive)
         (cider-interactive-eval "(reloaded.repl/reset)"))
       (evil-leader/set-key-for-mode 'clojure-mode
-        "mj" 'cider-project-reset))))
+        "mj" 'cider-project-reset)
+      (enable-paredit-mode)
+      (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
+      (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly))))
 
 ;; For each package, define a function user/init-<package-user>
 ;;
