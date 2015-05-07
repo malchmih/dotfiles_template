@@ -3,7 +3,7 @@
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.1"]
                   [cider/cider-nrepl "0.9.0-SNAPSHOT"]
-                  [refactor-nrepl "1.0.5"]
+                  [refactor-nrepl "1.1.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.9.0"]]
         :dependencies [[pjstadig/humane-test-output "0.7.0"]
                        [org.clojure/tools.nrepl "0.2.10"]]
