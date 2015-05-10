@@ -26,6 +26,9 @@ which require an initialization must be listed explicitly in the list.")
 (defun user/init-cider ()
   (use-package cider
     :defer t
+    :init
+    (progn
+      (add-hook 'clojure-mode-hook #'enable-paredit-mode))
     :config
     (progn
       (defun cider-project-reset ()
@@ -33,9 +36,10 @@ which require an initialization must be listed explicitly in the list.")
         (cider-interactive-eval "(reloaded.repl/reset)"))
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
-      (enable-paredit-mode)
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
-      (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly))))
+      (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
+      (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
+      (define-key paredit-mode-map (kbd "M-}") 'paredit-close-curly-and-newline))))
 
 ;; For each package, define a function user/init-<package-user>
 ;;
