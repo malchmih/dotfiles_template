@@ -50,10 +50,12 @@ before layers configuration."
                          zenburn
                          sanityinc-solarized-dark
                          solarized-light
+                         misterioso
                          monokai
                          base16-ocean-dark
                          sanityinc-tomorrow-night
                          wombat
+                         cyberpunk
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
