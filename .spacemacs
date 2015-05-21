@@ -12,6 +12,7 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers '(
      auto-completion
+     emacs-lisp
      user
      scala
      clojure
@@ -24,6 +25,7 @@
      eyebrowse
      ibuffer
      games
+     shell
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -118,10 +120,13 @@ before layers configuration."
    dotspacemacs-default-package-repository nil)
   ;; User initialization goes here
   (setq clojure-enable-fancify-symbols t)
-  (setq-default dotspacemacs-configuration-layers
-                '(auto-completion :variables
-                                  auto-completion-enable-company-help-tooltip t))
-  )
+  (setq-default
+   dotspacemacs-configuration-layers
+   '(auto-completion :variables auto-completion-enable-company-help-tooltip t)
+   dotspacemacs-configuration-layers
+   '(shell :variables shell-default-shell ansi-term)
+   dotspacemacs-configuration-layers
+   '(shell :variables shell-default-term-shell "/usr/local/bin/fish")))
 
 (defun dotspacemacs/config ()
   "Configuration function.
