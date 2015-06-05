@@ -1,5 +1,5 @@
 {:user {:plugins [[lein-ancient "0.6.7"]
-                  [lein-exec "0.3.4"]
+                  [lein-exec "0.3.5"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.1"]
                   [cider/cider-nrepl "0.9.0-SNAPSHOT"]
