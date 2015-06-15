@@ -1,1 +1,5 @@
 source ~/.vimrc
+
+nnoremap <leader>ff :action Go To Tab #1<cr>
+nnoremap <leader>ef :action :cursive.repl.actions/run-top-sexp<cr>
+nnoremap <leader>ee :action :cursive.repl.actions/run-last-sexp<cr>
