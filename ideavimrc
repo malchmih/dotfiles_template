@@ -1,7 +1,7 @@
 source ~/.vimrc
 
-nnoremap <space>ef :action :cursive.repl.actions/run-top-sexp<cr>
-nnoremap <space>ee :action :cursive.repl.actions/run-last-sexp<cr>
+nnoremap <leader>ef :action :cursive.repl.actions/run-top-sexp<cr>
+nnoremap <leader>ee :action :cursive.repl.actions/run-last-sexp<cr>
 
 nnoremap <space>ff :action GotoFile<cr>
 nnoremap <space>fc :action GotoClass<cr>
