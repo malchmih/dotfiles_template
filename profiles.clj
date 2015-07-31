@@ -8,7 +8,7 @@
                   [lein-kibit "0.1.2"]
                   [jonase/eastwood "0.2.1"]
                   [lein-bikeshed "0.2.0"]
-                  [lein-cljfmt "0.2.0"]]
+                  [lein-cljfmt "0.3.0"]]
         :dependencies [[pjstadig/humane-test-output "0.7.0"]
                        [org.clojure/tools.nrepl "0.2.10"]]
         :aliases {"anc" ["do" 
