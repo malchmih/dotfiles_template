@@ -23,7 +23,7 @@ which require an initialization must be listed explicitly in the list.")
 (defvar user-excluded-packages '()
   "List of packages to exclude.")
 
-(defun user/init-cider ()
+(defun user/post-init-cider ()
   (use-package cider
     :defer t
     :init
@@ -35,8 +35,10 @@ which require an initialization must be listed explicitly in the list.")
         (interactive)
         (cider-interactive-eval "(reloaded.repl/reset)"))
       (evil-leader/set-key-for-mode 'clojure-mode
-        "mj" 'cider-project-reset
-        "msj" 'cider-jack-in-clojurescript)
+        "mj" 'cider-project-reset)
+      (dolist (m '(clojure-mode clojurec-mode clojurescript-mode clojurex-mode))
+          (evil-leader/set-key-for-mode m
+            "msj" 'cider-jack-in-clojurescript))
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
