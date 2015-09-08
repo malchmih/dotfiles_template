@@ -180,6 +180,7 @@ layers configuration."
  '(cider-cljs-repl
    "(do (require 'cljs.repl.node) (cemerick.piggieback/cljs-repl (cljs.repl.node/repl-env)))")
  '(company-quickhelp-delay nil)
+ '(fill-column 120)
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
