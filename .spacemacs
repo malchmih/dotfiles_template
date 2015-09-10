@@ -13,7 +13,8 @@
    dotspacemacs-configuration-layers '(
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t)
-     clojure
+     (clojure :variables
+              clojure-enable-fancify-symbols t)
      dash
      emacs-lisp
      evil-commentary
@@ -155,14 +156,19 @@ before layers configuration."
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now.
-   dotspacemacs-default-package-repository nil)
-  ;; User initialization goes here
-  (setq clojure-enable-fancify-symbols t))
+   dotspacemacs-default-package-repository nil
+   ))
 
-(defun dotspacemacs/config ()
-  "Configuration function.
+(defun dotspacemacs/user-init ()
+     "Initialization function for user code.
+It is called immediately after `dotspacemacs/init'.  You are free to put any
+user code."
+     )
+
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
-layers configuration."
+layers configuration. You are free to put any user code."
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
