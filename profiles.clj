@@ -8,13 +8,14 @@
                   [lein-kibit "0.1.2"]
                   [jonase/eastwood "0.2.1"]
                   [lein-bikeshed "0.2.0"]
-                  [lein-cljfmt "0.3.0"]]
+                  [lein-cljfmt "0.3.0"]
+                  [lein-hiera "0.9.0"]]
         :dependencies [[pjstadig/humane-test-output "0.7.0"]
                        [org.clojure/tools.nrepl "0.2.10"]]
-        :aliases {"anc" ["do" 
-                         ["ancient" ":all"] 
+        :aliases {"anc" ["do"
+                         ["ancient" ":all"]
                          ["ancient" "profiles" ":all"]]
-                  "anc-up" ["do" 
+                  "anc-up" ["do"
                             ["ancient" "upgrade" ":interactive" ":all"]
                             ["ancient" "upgrade-profiles" ":interactive" ":all"]]}
         :injections [(require 'pjstadig.humane-test-output)
