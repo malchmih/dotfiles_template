@@ -11,7 +11,7 @@
                   [lein-cljfmt "0.3.0"]
                   [lein-hiera "0.9.0"]]
         :dependencies [[pjstadig/humane-test-output "0.7.0"]
-                       [org.clojure/tools.nrepl "0.2.10"]]
+                       [org.clojure/tools.nrepl "0.2.11"]]
         :aliases {"anc" ["do"
                          ["ancient" ":all"]
                          ["ancient" "profiles" ":all"]]
