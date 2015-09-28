@@ -188,7 +188,7 @@ layers configuration. You are free to put any user code."
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
  '(cider-cljs-repl
-   "(do (require 'cljs.repl.node) (cemerick.piggieback/cljs-repl (cljs.repl.node/repl-env)))")
+   "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(company-quickhelp-delay nil)
  '(fill-column 120)
  '(ring-bell-function (quote ignore) t))

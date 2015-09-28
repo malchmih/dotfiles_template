@@ -33,7 +33,7 @@ which require an initialization must be listed explicitly in the list.")
     (progn
       (defun cider-project-reset ()
         (interactive)
-        (cider-interactive-eval "(reloaded.repl/reset)"))
+        (cider-interactive-eval "(reloaded/reset)"))
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
       (dolist (m '(clojure-mode clojurec-mode clojurescript-mode clojurex-mode))
