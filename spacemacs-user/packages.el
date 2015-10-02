@@ -36,9 +36,9 @@ which require an initialization must be listed explicitly in the list.")
         (cider-interactive-eval "(reloaded/reset)"))
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
-      (dolist (m '(clojure-mode clojurec-mode clojurescript-mode clojurex-mode))
-          (evil-leader/set-key-for-mode m
-            "msj" 'cider-jack-in-clojurescript))
+      (dolist (m '(cider-repl-mode))
+        (evil-leader/set-key-for-mode m
+          "mc" 'cider-repl-clear-buffer))
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)

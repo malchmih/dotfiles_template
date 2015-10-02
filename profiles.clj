@@ -3,7 +3,7 @@
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.1"]
                   [cider/cider-nrepl "0.10.0-SNAPSHOT"]
-                  [refactor-nrepl "1.2.0"]
+                  [refactor-nrepl "2.0.0-SNAPSHOT"]
                   [com.jakemccrary/lein-test-refresh "0.11.0"]
                   [lein-kibit "0.1.2"]
                   [jonase/eastwood "0.2.1"]
