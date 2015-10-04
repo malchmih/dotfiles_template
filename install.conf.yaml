@@ -8,6 +8,9 @@
     ~/.lein/profiles.clj:
       create: true
       path: profiles.clj
+    ~/.boot/profile.boot:
+      create: true
+      path: profile.boot
     ~/.spacemacs: .spacemacs
     ~/.emacs.d/private/user:
       create: true
