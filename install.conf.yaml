@@ -1,6 +1,7 @@
 - clean: ['~']
 - link:
     ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
     ~/.config/fish/config.fish:
       create: true
       path: config.fish
