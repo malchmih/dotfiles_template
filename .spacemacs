@@ -74,7 +74,7 @@ before layers configuration."
    dotspacemacs-themes '(
                          sanityinc-solarized-dark
                          zenburn
-                         solarized-light
+                         sanityinc-solarized-light
                          misterioso
                          monokai
                          base16-ocean-dark

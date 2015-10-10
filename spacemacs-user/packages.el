@@ -10,18 +10,22 @@
 ;;
 ;;; License: GPLv3
 
-(defvar user-packages
+;; List of all packages to install and/or initialize. Built-in packages
+;; which require an initialization must be listed explicitly in the list.
+(setq user-packages
   '(
-    ;; package users go here
-    solarized-theme
     cider
-    monokai
-    )
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+    clojure-cheatsheet
 
-(defvar user-excluded-packages '()
-  "List of packages to exclude.")
+    monokai-theme
+    base16-theme
+    solarized-theme
+    ))
+
+;; List of packages to exclude.
+(setq user-excluded-packages '())
+
+(defun user/init-cider ())
 
 (defun user/post-init-cider ()
   (use-package cider
@@ -54,6 +58,15 @@ which require an initialization must be listed explicitly in the list.")
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
       (define-key paredit-mode-map (kbd "M-}") 'paredit-close-curly-and-newline))))
+
+(defun user/init-clojure-cheatsheet ())
+
+(defun user/init-monokai-theme ())
+
+(defun user/init-base16-theme ())
+
+(defun user/init-solarized-theme ())
+
 
 ;; For each package, define a function user/init-<package-user>
 ;;
