@@ -20,6 +20,7 @@
      (clojure :variables
               clojure-enable-fancify-symbols t)
      dash
+     elixir
      emacs-lisp
      evil-commentary
      eyebrowse
