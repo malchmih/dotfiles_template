@@ -25,8 +25,6 @@
 ;; List of packages to exclude.
 (setq user-excluded-packages '())
 
-(defun user/init-cider ())
-
 (defun user/post-init-cider ()
   (use-package cider
     :defer t
@@ -54,6 +52,8 @@
       (dolist (m '(cider-repl-mode))
         (evil-leader/set-key-for-mode m
           "mc" 'cider-repl-clear-buffer))
+      (evil-leader/set-key-for-mode 'clojure-mode
+        "mhc" 'clojure-cheatsheet)
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
