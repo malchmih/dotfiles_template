@@ -49,6 +49,8 @@
         "mj" 'cider-project-reset)
       (evil-leader/set-key-for-mode 'clojure-mode
         "msj" 'cider-figwheel-repl)
+      (evil-leader/set-key-for-mode 'clojure-mode
+        "msC" 'cider-replicate-connection)
       (dolist (m '(cider-repl-mode))
         (evil-leader/set-key-for-mode m
           "mc" 'cider-repl-clear-buffer))
