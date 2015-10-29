@@ -36,17 +36,21 @@
       (defun cider-project-reset ()
         (interactive)
         (cider-interactive-eval "(reloaded/reset)"))
+      (defun cider-start-figwheel ()
+        (interactive)
+        (cider-interactive-eval "(user/start-figwheel!)"))
       (defun cider-figwheel-repl ()
         (interactive)
         (save-some-buffers)
         (with-current-buffer (cider-current-repl-buffer)
           (goto-char (point-max))
-          (insert "(require 'figwheel-sidecar.repl-api)
-             (figwheel-sidecar.repl-api/cljs-repl)")
+          (insert "(cljs-repl)")
           (cider-repl-return)))
 
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
+      (evil-leader/set-key-for-mode 'clojure-mode
+        "mF" 'cider-start-figwheel)
       (evil-leader/set-key-for-mode 'clojure-mode
         "msj" 'cider-figwheel-repl)
       (evil-leader/set-key-for-mode 'clojure-mode
