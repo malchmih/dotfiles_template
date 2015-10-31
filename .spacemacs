@@ -75,13 +75,15 @@ before layers configuration."
    dotspacemacs-themes '(
                          sanityinc-solarized-dark
                          zenburn
+                         ample
+                         monokai
                          sanityinc-solarized-light
                          misterioso
-                         monokai
                          base16-ocean-dark
                          sanityinc-tomorrow-night
                          wombat
                          cyberpunk
+                         ;; dracula
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
