@@ -12,7 +12,7 @@
                   [lein-hiera "0.9.0"]
                   [quickie "0.4.1"]]
         :dependencies [[pjstadig/humane-test-output "0.7.0"]
-                       [org.clojure/tools.nrepl "0.2.11"]]
+                       [org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ["do"
                          ["ancient" ":all"]
                          ["ancient" "profiles" ":all"]]
