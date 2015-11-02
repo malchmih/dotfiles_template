@@ -83,7 +83,7 @@ before layers configuration."
                          sanityinc-tomorrow-night
                          wombat
                          cyberpunk
-                         ;; dracula
+                         dracula
                          )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
