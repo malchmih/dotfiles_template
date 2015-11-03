@@ -1,4 +1,4 @@
-{:user {:plugins [[lein-ancient "0.6.7"]
+{:user {:plugins [[lein-ancient "0.6.8"]
                   [lein-exec "0.3.5"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.1"]
@@ -15,7 +15,7 @@
                        [org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ["do"
                          ["ancient" ":all"]
-                         ["ancient" "profiles" ":all"]]
+                         ["ancient" "check-profiles" ":all"]]
                   "anc-up" ["do"
                             ["ancient" "upgrade" ":interactive" ":all"]
                             ["ancient" "upgrade-profiles" ":interactive" ":all"]]}
