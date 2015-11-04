@@ -31,7 +31,9 @@
     :defer t
     :init
     (progn
-      (add-hook 'clojure-mode-hook #'enable-paredit-mode))
+      (setq default-fill-column 120)
+      (add-hook 'clojure-mode-hook 'enable-paredit-mode)
+      (add-hook 'clojure-mode-hook 'turn-on-fci-mode))
     :config
     (progn
       (defun cider-project-reset ()
