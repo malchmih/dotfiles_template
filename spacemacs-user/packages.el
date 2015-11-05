@@ -39,9 +39,6 @@
       (defun cider-project-reset ()
         (interactive)
         (cider-interactive-eval "(reloaded/reset)"))
-      (defun cider-start-figwheel ()
-        (interactive)
-        (cider-interactive-eval "(user/start-figwheel!)"))
       (defun cider-figwheel-repl ()
         (interactive)
         (save-some-buffers)
@@ -52,8 +49,6 @@
 
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "mF" 'cider-start-figwheel)
       (evil-leader/set-key-for-mode 'clojure-mode
         "msj" 'cider-figwheel-repl)
       (evil-leader/set-key-for-mode 'clojure-mode
