@@ -31,7 +31,15 @@
     :defer t
     :init
     (progn
-      (setq default-fill-column 120)
+      (setq default-fill-column 120
+            nrepl-log-messages nil
+            nrepl-hide-special-buffers t
+            cider-repl-prompt-function 'cider-repl-prompt-abbreviated
+            cider-prompt-for-symbol nil
+            cider-repl-display-in-current-window t
+            cider-font-lock-dynamically '(macro core function var)
+            cider-overlays-use-font-lock t
+            cider-repl-toggle-pretty-printing t)
       (add-hook 'clojure-mode-hook 'enable-paredit-mode)
       (add-hook 'clojure-mode-hook 'turn-on-fci-mode))
     :config
