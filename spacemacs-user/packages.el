@@ -16,6 +16,8 @@
   '(
     cider
     clojure-cheatsheet
+    hydra
+    lispy
 
     monokai-theme
     base16-theme
@@ -41,6 +43,7 @@
             cider-overlays-use-font-lock t
             cider-repl-toggle-pretty-printing t)
       (add-hook 'clojure-mode-hook 'enable-paredit-mode)
+      (add-hook 'clojure-mode-hook 'lispy-mode)
       (add-hook 'clojure-mode-hook 'turn-on-fci-mode))
     :config
     (progn
@@ -72,6 +75,10 @@
       (define-key paredit-mode-map (kbd "M-}") 'paredit-close-curly-and-newline))))
 
 (defun user/init-clojure-cheatsheet ())
+
+(defun user/init-hydra ())
+
+(defun user/init-lispy ())
 
 (defun user/init-monokai-theme ())
 
