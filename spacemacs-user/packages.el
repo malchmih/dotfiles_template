@@ -78,7 +78,11 @@
 
 (defun user/init-hydra ())
 
-(defun user/init-lispy ())
+(defun user/init-lispy ()
+  (use-package lispy
+    :config
+    (progn
+      (define-key lispy-mode-map (kbd "[") nil))))
 
 (defun user/init-monokai-theme ())
 
