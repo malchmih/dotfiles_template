@@ -28,6 +28,7 @@
      git
      html
      ibuffer
+     ;; java
      org
      scala
      (shell :variables
@@ -171,7 +172,8 @@ before layers configuration."
      "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
-     )
+     (setq eclim-eclipse-dirs "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse"
+           eclim-executable "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse/eclim"))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
