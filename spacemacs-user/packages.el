@@ -48,9 +48,11 @@
       (add-hook 'clojure-mode-hook 'golden-ratio-mode))
     :config
     (progn
+
       (defun cider-project-reset ()
         (interactive)
         (cider-interactive-eval "(reloaded/reset)"))
+
       (defun cider-figwheel-repl ()
         (interactive)
         (save-some-buffers)
@@ -59,10 +61,19 @@
           (insert "(cljs-repl)")
           (cider-repl-return)))
 
+      (defun cider-default-connect ()
+        (interactive)
+        (let* ((project-dir (clojure-project-dir))
+               (host (cider-current-host))
+               (port (string-to-int (car (cdr (car (cider--infer-ports host nil)))))))
+          (cider-connect host port project-dir)))
+
       (evil-leader/set-key-for-mode 'clojure-mode
         "mj" 'cider-project-reset)
       (evil-leader/set-key-for-mode 'clojure-mode
         "msj" 'cider-figwheel-repl)
+      (evil-leader/set-key-for-mode 'clojure-mode
+        "msa" 'cider-default-connect)
       (evil-leader/set-key-for-mode 'clojure-mode
         "msC" 'cider-replicate-connection)
       (dolist (m '(cider-repl-mode))
