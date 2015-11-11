@@ -44,7 +44,8 @@
             cider-repl-toggle-pretty-printing t)
       (add-hook 'clojure-mode-hook 'enable-paredit-mode)
       (add-hook 'clojure-mode-hook 'lispy-mode)
-      (add-hook 'clojure-mode-hook 'turn-on-fci-mode))
+      (add-hook 'clojure-mode-hook 'turn-on-fci-mode)
+      (add-hook 'clojure-mode-hook 'golden-ratio-mode))
     :config
     (progn
       (defun cider-project-reset ()
