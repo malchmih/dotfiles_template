@@ -20,6 +20,7 @@
      (clojure :variables
               clojure-enable-fancify-symbols t)
      dash
+     deft
      elixir
      emacs-lisp
      evil-commentary
@@ -173,7 +174,8 @@ before layers configuration."
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
      (setq eclim-eclipse-dirs "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse"
-           eclim-executable "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse/eclim"))
+           eclim-executable "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse/eclim"
+           deft-directory "~/Dropbox/notes"))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
