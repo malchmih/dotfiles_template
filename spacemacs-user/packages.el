@@ -95,8 +95,7 @@
     :init (spacemacs/load-or-install-package 'hydra)
     :config
     (progn
-      (define-key lispy-mode-map (kbd "[") nil)))
-  )
+      (define-key lispy-mode-map (kbd "[") nil))))
 
 (defun user/init-monokai-theme ())
 
