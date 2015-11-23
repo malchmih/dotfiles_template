@@ -68,19 +68,18 @@
                (port (string-to-int (car (cdr (car (cider--infer-ports host nil)))))))
           (cider-connect host port project-dir)))
 
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "mj" 'cider-project-reset)
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "msj" 'cider-figwheel-repl)
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "msa" 'cider-default-connect)
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "msC" 'cider-replicate-connection)
+      (dolist (m '(clojure-mode))
+        (spacemacs/set-leader-keys-for-major-mode m
+          "j" 'cider-project-reset
+          "sj" 'cider-figwheel-repl
+          "sa" 'cider-default-connect
+          "sC" 'cider-replicate-connection
+          "hc" 'clojure-cheatsheet))
+
       (dolist (m '(cider-repl-mode))
-        (evil-leader/set-key-for-mode m
-          "mc" 'cider-repl-clear-buffer))
-      (evil-leader/set-key-for-mode 'clojure-mode
-        "mhc" 'clojure-cheatsheet)
+        (spacemacs/set-leader-keys-for-major-mode m
+          "c" 'cider-repl-clear-buffer))
+
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
