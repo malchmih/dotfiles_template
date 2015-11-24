@@ -2,6 +2,7 @@
 - link:
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
     ~/.config/fish/config.fish:
       create: true
       path: config.fish
