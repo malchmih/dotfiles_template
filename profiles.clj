@@ -1,12 +1,9 @@
 {:user {:plugins [[lein-ancient "0.6.8"]
                   [lein-exec "0.3.5"]
                   [lein-try "0.4.3"]
-                  [jonase/eastwood "0.2.1"]
-                  [cider/cider-nrepl "0.10.0-SNAPSHOT"]
-                  [refactor-nrepl "2.0.0-SNAPSHOT"]
+                  [jonase/eastwood "0.2.2"]
                   [com.jakemccrary/lein-test-refresh "0.11.0"]
                   [lein-kibit "0.1.2"]
-                  [jonase/eastwood "0.2.1"]
                   [lein-bikeshed "0.2.0"]
                   [lein-cljfmt "0.3.0"]
                   [lein-hiera "0.9.5"]
@@ -24,5 +21,6 @@
                   "dev" ^{:doc "Run development repl"}
                   [["repl" ":headless"]]}
         :injections [(require 'pjstadig.humane-test-output)
-                     (pjstadig.humane-test-output/activate!)]}}
-
+                     (pjstadig.humane-test-output/activate!)]}
+ :repl {:plugins [[cider/cider-nrepl "0.10.0-SNAPSHOT"]
+                  [refactor-nrepl "2.0.0-SNAPSHOT"]]}}

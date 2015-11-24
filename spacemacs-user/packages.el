@@ -33,7 +33,7 @@
     :defer t
     :init
     (progn
-      (setq default-fill-column 120
+      (setq default-fill-column 80
             nrepl-log-messages nil
             nrepl-hide-special-buffers t
             cider-repl-prompt-function 'cider-repl-prompt-abbreviated
