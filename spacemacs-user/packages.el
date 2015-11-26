@@ -51,7 +51,7 @@
 
       (defun cider-project-reset ()
         (interactive)
-        (cider-interactive-eval "(reloaded/reset)"))
+        (cider-interactive-eval "(dev/reset)"))
 
       (defun cider-figwheel-repl ()
         (interactive)
