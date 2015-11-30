@@ -8,7 +8,7 @@
                   [lein-cljfmt "0.3.0"]
                   [lein-hiera "0.9.5"]
                   [quickie "0.4.1"]]
-        :dependencies [[pjstadig/humane-test-output "0.7.0"]
+        :dependencies [[pjstadig/humane-test-output "0.7.1"]
                        [org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
