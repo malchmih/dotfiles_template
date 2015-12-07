@@ -78,6 +78,7 @@ before layers configuration."
    dotspacemacs-themes '(
                          zenburn
                          sanityinc-solarized-dark
+                         noctilux
                          ample
                          monokai
                          sanityinc-solarized-light
