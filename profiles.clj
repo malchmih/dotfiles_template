@@ -22,5 +22,5 @@
                   [["repl" ":headless"]]}
         :injections [(require 'pjstadig.humane-test-output)
                      (pjstadig.humane-test-output/activate!)]}
- :repl {:plugins [[cider/cider-nrepl "0.10.0"]
+ :repl {:plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
                   [refactor-nrepl "2.0.0-SNAPSHOT"]]}}
