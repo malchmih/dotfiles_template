@@ -12,8 +12,8 @@
                        [org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
-                   ["ancient" ":all"]
-                   ["ancient" "check-profiles" ":all"]]
+                   ["ancient" "check-profiles" ":all"]
+                   ["ancient" ":all"]]
                   "anc-up" ^{:doc "Upgrade all dependencies interactively"}
                   ["do"
                    ["ancient" "upgrade" ":interactive" ":all"]
