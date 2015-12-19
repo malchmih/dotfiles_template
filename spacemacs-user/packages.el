@@ -61,6 +61,14 @@
           (insert "(cljs-repl)")
           (cider-repl-return)))
 
+      (defun cider-dev ()
+        (interactive)
+        (save-some-buffers)
+        (with-current-buffer (cider-current-repl-buffer)
+          (goto-char (point-max))
+          (insert "(dev)")
+          (cider-repl-return)))
+
       (defun cider-default-connect ()
         (interactive)
         (let* ((project-dir (clojure-project-dir))
@@ -71,6 +79,7 @@
       (dolist (m '(clojure-mode))
         (spacemacs/set-leader-keys-for-major-mode m
           "j" 'cider-project-reset
+          "J" 'cider-dev
           "sj" 'cider-figwheel-repl
           "sa" 'cider-default-connect
           "sC" 'cider-replicate-connection
