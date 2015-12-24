@@ -63,11 +63,7 @@
 
       (defun cider-dev ()
         (interactive)
-        (save-some-buffers)
-        (with-current-buffer (cider-current-repl-buffer)
-          (goto-char (point-max))
-          (insert "(dev)")
-          (cider-repl-return)))
+        (cider-repl-set-ns "dev"))
 
       (defun cider-default-connect ()
         (interactive)
