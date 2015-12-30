@@ -196,10 +196,13 @@ layers configuration. You are free to put any user code."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(cider-cljs-lein-repl
+   "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(cider-cljs-repl
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(company-quickhelp-delay nil)
  '(fill-column 120)
+ '(neo-theme (quote nerd))
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
