@@ -7,6 +7,7 @@
                   [lein-bikeshed "0.2.0"]
                   [lein-cljfmt "0.3.0"]
                   [lein-hiera "0.9.5"]
+                  [venantius/yagni "0.1.4"]
                   [quickie "0.4.1"]]
         :dependencies [[pjstadig/humane-test-output "0.7.1"]
                        [org.clojure/tools.nrepl "0.2.12"]]
