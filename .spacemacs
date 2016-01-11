@@ -31,6 +31,7 @@
      ibuffer
      ;; java
      org
+     ruby
      scala
      (shell :variables
             shell-default-shell 'multi-term
