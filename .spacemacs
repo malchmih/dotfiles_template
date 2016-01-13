@@ -21,6 +21,7 @@
               clojure-enable-fancify-symbols t)
      dash
      deft
+     dockerfile
      elixir
      emacs-lisp
      evil-commentary
@@ -36,10 +37,12 @@
      (shell :variables
             shell-default-shell 'multi-term
             shell-enable-smart-eshell t)
+     shell-scripts
      syntax-checking
      spacemacs-helm
      themes-megapack
      user
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
