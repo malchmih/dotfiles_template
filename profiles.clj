@@ -9,8 +9,7 @@
                   [lein-hiera "0.9.5"]
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.1"]]
-        :dependencies [[pjstadig/humane-test-output "0.7.1"]
-                       [org.clojure/tools.nrepl "0.2.12"]]
+        :dependencies [[org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
                    ["ancient" "check-profiles" ":all"]
@@ -20,8 +19,6 @@
                    ["ancient" "upgrade" ":interactive" ":all"]
                    ["ancient" "upgrade-profiles" ":interactive" ":all"]]
                   "dev" ^{:doc "Run development repl"}
-                  [["repl" ":headless"]]}
-        :injections [(require 'pjstadig.humane-test-output)
-                     (pjstadig.humane-test-output/activate!)]}
+                  [["repl" ":headless"]]}}
  :repl {:plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
                   [refactor-nrepl "2.0.0-SNAPSHOT"]]}}
