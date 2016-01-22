@@ -269,6 +269,7 @@ layers configuration. You are free to put any user code."
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(cider-cljs-repl
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
+ '(cljr-warn-on-eval nil)
  '(company-quickhelp-delay nil)
  '(fill-column 120)
  '(neo-theme (quote nerd))
