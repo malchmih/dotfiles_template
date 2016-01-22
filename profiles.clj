@@ -1,5 +1,5 @@
 {:user {:plugins [[lein-ancient "0.6.8"]
-                  [lein-exec "0.3.5"]
+                  [lein-exec "0.3.6"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.3"]
                   [com.jakemccrary/lein-test-refresh "0.12.0"]

@@ -2,7 +2,7 @@ resolvers += Resolver.sonatypeRepo("snapshots")
 
 resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
 
-addSbtPlugin("org.ensime" % "ensime-sbt" % "0.1.5")
+addSbtPlugin("org.ensime" % "ensime-sbt" % "0.2.3")
 
 addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.8")
 
