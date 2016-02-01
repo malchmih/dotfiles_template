@@ -19,6 +19,6 @@
                    ["ancient" "upgrade" ":interactive" ":all"]
                    ["ancient" "upgrade-profiles" ":interactive" ":all"]]
                   "dev" ^{:doc "Run development repl"}
-                  [["repl" ":headless"]]}}
+                  ["do" "clean" ["repl" ":headless"]]}}
  :repl {:plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
                   [refactor-nrepl "2.0.0-SNAPSHOT"]]}}
