@@ -12,12 +12,12 @@
         :dependencies [[org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
-                   ["ancient" "check-profiles" ":all"]
-                   ["ancient" ":all"]]
+                   ["ancient" "check-profiles" ":all" ":check-clojure"]
+                   ["ancient" ":all" ":check-clojure"]]
                   "anc-up" ^{:doc "Upgrade all dependencies interactively"}
                   ["do"
-                   ["ancient" "upgrade" ":interactive" ":all"]
-                   ["ancient" "upgrade-profiles" ":interactive" ":all"]]
+                   ["ancient" "upgrade" ":interactive" ":all" ":check-clojure"]
+                   ["ancient" "upgrade-profiles" ":interactive" ":all" ":check-clojure"]]
                   "dev" ^{:doc "Run development repl"}
                   ["do" "clean" ["repl" ":headless"]]}}
  :repl {:plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
