@@ -22,7 +22,6 @@
     monokai-theme
     base16-theme
     solarized-theme
-    dracula-theme
     ))
 
 ;; List of packages to exclude.
@@ -110,8 +109,6 @@
 (defun user/init-base16-theme ())
 
 (defun user/init-solarized-theme ())
-
-(defun user/init-dracula-theme ())
 
 ;; For each package, define a function user/init-<package-user>
 ;;
