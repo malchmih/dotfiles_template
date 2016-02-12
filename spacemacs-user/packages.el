@@ -16,10 +16,8 @@
   '(
     cider
     clojure-cheatsheet
-    hydra
     lispy
 
-    monokai-theme
     base16-theme
     solarized-theme
     ))
@@ -95,16 +93,12 @@
 
 (defun user/init-clojure-cheatsheet ())
 
-(defun user/init-hydra ())
-
 (defun user/init-lispy ()
   (use-package lispy
     :init (spacemacs/load-or-install-package 'hydra)
     :config
     (progn
       (define-key lispy-mode-map (kbd "[") nil))))
-
-(defun user/init-monokai-theme ())
 
 (defun user/init-base16-theme ())
 
