@@ -39,8 +39,8 @@
             shell-enable-smart-eshell t)
      shell-scripts
      syntax-checking
-     ;; spacemacs-helm
-     spacemacs-ivy
+     spacemacs-helm
+     ;; spacemacs-ivy
      themes-megapack
      user
      yaml
