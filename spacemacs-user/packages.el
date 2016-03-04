@@ -86,6 +86,11 @@
         (spacemacs/set-leader-keys-for-major-mode m
           "c" 'cider-repl-clear-buffer))
 
+      ;; Temporary fix
+      (dolist (m '(clojure-mode clojurec-mode clojurescript-mode clojurex-mode))
+        (spacemacs/set-leader-keys-for-major-mode m
+          "gb" 'cider-pop-back))
+
       (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
       (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
       (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
