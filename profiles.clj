@@ -20,5 +20,5 @@
                    ["ancient" "upgrade-profiles" ":interactive" ":all" ":check-clojure"]]
                   "dev" ^{:doc "Run development repl"}
                   ["do" "clean" ["repl" ":headless"]]}}
- :repl {:plugins [[cider/cider-nrepl "0.11.0-SNAPSHOT"]
+ :repl {:plugins [[cider/cider-nrepl "0.12.0-SNAPSHOT"]
                   [refactor-nrepl "2.2.0-SNAPSHOT"]]}}
