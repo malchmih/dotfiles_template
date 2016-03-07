@@ -271,7 +271,7 @@ layers configuration. You are free to put any user code."
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(cider-repl-display-help-banner nil)
  '(cljr-warn-on-eval nil)
- '(clojure-indent-style :align-arguments)
+ '(clojure-indent-style :always-align)
  '(company-quickhelp-delay nil)
  '(fill-column 120)
  '(neo-theme (quote nerd))
