@@ -8,7 +8,7 @@
                   [lein-cljfmt "0.4.1"]
                   [lein-hiera "0.9.5"]
                   [venantius/yagni "0.1.4"]
-                  [quickie "0.4.1"]]
+                  [quickie "0.4.2"]]
         :dependencies [[org.clojure/tools.nrepl "0.2.12"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
