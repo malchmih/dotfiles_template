@@ -25,7 +25,6 @@
      elixir
      emacs-lisp
      evil-commentary
-     eyebrowse
      games
      git
      html
@@ -38,8 +37,8 @@
             shell-default-shell 'multi-term
             shell-enable-smart-eshell t)
      shell-scripts
-     syntax-checking
      spacemacs-helm
+     syntax-checking
      ;; spacemacs-ivy
      themes-megapack
      user
