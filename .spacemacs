@@ -9,6 +9,9 @@
    ;; `!distribution'. For now available distributions are `spacemacs-core'
    ;; or `spacemacs'. (default 'spacemacs-core)
    dotspacemacs-distribution 'spacemacs
+   ;; If non-nil layers with lazy install support are lazy installed.
+   ;; (default t)
+   dotspacemacs-enable-lazy-installation nil
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
@@ -19,8 +22,6 @@
                       auto-completion-enable-help-tooltip t)
      (clojure :variables
               clojure-enable-fancify-symbols t)
-     dash
-     deft
      dockerfile
      elixir
      emacs-lisp
@@ -29,7 +30,6 @@
      git
      html
      ibuffer
-     ;; java
      org
      ruby
      scala
@@ -39,7 +39,6 @@
      shell-scripts
      spacemacs-helm
      syntax-checking
-     ;; spacemacs-ivy
      themes-megapack
      user
      yaml
@@ -264,14 +263,9 @@ layers configuration. You are free to put any user code."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
- '(cider-cljs-lein-repl
-   "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
- '(cider-cljs-repl
-   "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(cider-repl-display-help-banner nil)
  '(cljr-warn-on-eval nil)
  '(clojure-indent-style :always-align)
- '(company-quickhelp-delay nil)
  '(fill-column 120)
  '(neo-theme (quote nerd))
  '(ring-bell-function (quote ignore) t))
