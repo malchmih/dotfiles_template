@@ -30,6 +30,7 @@
      git
      html
      ibuffer
+     markdown
      org
      ruby
      scala
@@ -85,7 +86,7 @@ before layers configuration."
    ;; banner with the corresponding index is used, if the value is `random'
    ;; then the banner is chosen randomly among the available banners, if
    ;; the value is nil then no banner is displayed.
-   dotspacemacs-startup-banner 'random
+   dotspacemacs-startup-banner 0
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)
