@@ -17,6 +17,7 @@
     cider
     clojure-cheatsheet
     lispy
+    ox-reveal
 
     base16-theme
     solarized-theme
@@ -24,6 +25,14 @@
 
 ;; List of packages to exclude.
 (setq user-excluded-packages '())
+
+(defun user/init-ox-reveal ()
+  (use-package ox-reveal
+    :config
+    (progn
+      (dolist (m '(org-mode))
+        (spacemacs/set-leader-keys-for-major-mode m
+          "j" 'org-reveal-export-to-html)))))
 
 (defun user/post-init-cider ()
   (use-package cider
