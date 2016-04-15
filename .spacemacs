@@ -244,7 +244,19 @@ It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
      (setq eclim-eclipse-dirs "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse"
            eclim-executable "/opt/homebrew-cask/Caskroom/eclipse-java/4.5.1/Eclipse.app/Contents/Eclipse/eclim"
-           deft-directory "~/Dropbox/notes"))
+           deft-directory "~/Dropbox/notes")
+
+     (defun prepare-workspace ()
+       (interactive)
+       (spacemacs/layout-double-columns)
+       (neotree-find-project-root)
+       (select-window-1)
+       (split-window-below)
+       (select-window-3)
+       (split-window-below))
+
+     (spacemacs/set-leader-keys
+       "wc" 'prepare-workspace))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
