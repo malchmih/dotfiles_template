@@ -30,6 +30,7 @@
      git
      html
      ibuffer
+     javascript
      markdown
      org
      ruby
