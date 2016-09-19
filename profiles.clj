@@ -2,10 +2,10 @@
                   [lein-exec "0.3.6"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.3"]
-                  [com.jakemccrary/lein-test-refresh "0.16.0"]
+                  [com.jakemccrary/lein-test-refresh "0.17.0"]
                   [lein-kibit "0.1.2"]
                   [lein-bikeshed "0.3.0"]
-                  [lein-cljfmt "0.5.3"]
+                  [lein-cljfmt "0.5.5"]
                   [lein-hiera "0.9.5"]
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.2"]]
@@ -20,5 +20,5 @@
                    ["ancient" "upgrade-profiles" ":interactive" ":all" ":check-clojure"]]
                   "dev" ^{:doc "Run development repl"}
                   ["do" "clean" ["repl" ":headless"]]}}
- :repl {:plugins [[cider/cider-nrepl "0.13.0-SNAPSHOT"]
+ :repl {:plugins [[cider/cider-nrepl "0.14.0-SNAPSHOT"]
                   [refactor-nrepl "2.3.0-SNAPSHOT"]]}}
