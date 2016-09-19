@@ -16,7 +16,6 @@
   '(
     cider
     clojure-cheatsheet
-    lispy
     ox-reveal
 
     base16-theme
@@ -48,8 +47,6 @@
             cider-font-lock-dynamically '(macro core function var)
             cider-overlays-use-font-lock t
             cider-repl-toggle-pretty-printing t)
-      (add-hook 'clojure-mode-hook 'enable-paredit-mode)
-      (add-hook 'clojure-mode-hook 'lispy-mode)
       (add-hook 'clojure-mode-hook 'turn-on-fci-mode)
       (add-hook 'clojure-mode-hook 'golden-ratio-mode))
     :config
@@ -93,20 +90,9 @@
 
       (dolist (m '(cider-repl-mode))
         (spacemacs/set-leader-keys-for-major-mode m
-          "c" 'cider-repl-clear-buffer))
-
-      (define-key paredit-mode-map (kbd "M-[") 'paredit-wrap-square)
-      (define-key paredit-mode-map (kbd "M-]") 'paredit-close-square-and-newline)
-      (define-key paredit-mode-map (kbd "M-{") 'paredit-wrap-curly)
-      (define-key paredit-mode-map (kbd "M-}") 'paredit-close-curly-and-newline))))
+          "c" 'cider-repl-clear-buffer)))))
 
 (defun user/init-clojure-cheatsheet ())
-
-(defun user/init-lispy ()
-  (use-package lispy
-    :config
-    (progn
-      (define-key lispy-mode-map (kbd "[") nil))))
 
 (defun user/init-base16-theme ())
 
