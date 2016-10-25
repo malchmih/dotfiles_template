@@ -25,7 +25,7 @@
 ;; List of packages to exclude.
 (setq user-excluded-packages '())
 
-(defun user/init-ox-reveal ()
+(defun user/post-init-ox-reveal ()
   (use-package ox-reveal
     :config
     (progn
@@ -86,11 +86,7 @@
           "sj" 'cider-figwheel-repl
           "sa" 'cider-default-connect
           "sC" 'cider-replicate-connection
-          "hc" 'clojure-cheatsheet))
-
-      (dolist (m '(cider-repl-mode))
-        (spacemacs/set-leader-keys-for-major-mode m
-          "c" 'cider-repl-clear-buffer)))))
+          "hc" 'clojure-cheatsheet)))))
 
 (defun user/init-clojure-cheatsheet ())
 
