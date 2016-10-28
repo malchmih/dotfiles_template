@@ -27,6 +27,7 @@
 
 (defun user/post-init-ox-reveal ()
   (use-package ox-reveal
+    :defer t
     :config
     (progn
       (dolist (m '(org-mode))
