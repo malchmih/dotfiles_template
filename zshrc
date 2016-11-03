@@ -46,7 +46,7 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting history-substring-search brew chucknorris common-aliases gradle httpie lein mvn sudo wd mix stack)
+plugins=(git zsh-syntax-highlighting history-substring-search brew chucknorris common-aliases gradle httpie lein mvn sudo wd mix stack kubectl)
 
 # User configuration
 
