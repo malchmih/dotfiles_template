@@ -1,20 +1,12 @@
-(require
- 'boot.repl)
-
-(reset! boot.repl/*default-dependencies*
-        '[[org.clojure/tools.nrepl "0.2.11" :exclusions [[org.clojure/clojure]]]
-          [cider/cider-nrepl "0.10.0-SNAPSHOT"]])
-(swap! boot.repl/*default-dependencies*
-       concat '[[refactor-nrepl "2.0.0-SNAPSHOT"]])
-(swap! boot.repl/*default-middleware*
-       conj 'cider.nrepl/cider-middleware)
-(swap! boot.repl/*default-middleware*
-       conj 'refactor-nrepl.middleware/wrap-refactor)
-
-(set-env! :dependencies '[[org.clojure/clojure "1.7.0" :scope "test"]
-                          [org.clojure/clojurescript "1.7.122" :scope "test"]
-                          [org.clojure/tools.namespace "0.2.11" :scope "test"]
-                          [boot-deps "0.1.6" :scope "test"]
-                          [hendrick/boot-medusa "0.0.3" :scope "test"]])
-(require '[boot-deps :refer [ancient]]
-         '[hendrick.boot-medusa :refer [medusa]])
+(deftask cider
+  "CIDER profile"
+  []
+  (require 'boot.repl)
+  (swap! @(resolve 'boot.repl/*default-dependencies*)
+         concat '[[org.clojure/tools.nrepl "0.2.12"]
+                  [cider/cider-nrepl "0.15.0-SNAPSHOT"]
+                  [refactor-nrepl "2.3.0-SNAPSHOT"]])
+  (swap! @(resolve 'boot.repl/*default-middleware*)
+         concat '[cider.nrepl/cider-middleware
+                  refactor-nrepl.middleware/wrap-refactor])
+  identity)
