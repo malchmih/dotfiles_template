@@ -150,7 +150,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Source Code Pro for Powerline"
                                :size 13
                                :weight normal
                                :width normal
@@ -304,6 +304,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq powerline-default-separator 'utf-8)
   (spacemacs/toggle-evil-cleverparens-on)
   (add-hook 'clojure-mode-hook #'evil-cleverparens-mode)
 
@@ -327,11 +328,12 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil t)
- '(ahs-default-range (quote ahs-range-whole-buffer) t)
- '(ahs-idle-interval 0.25 t)
+ '(ahs-case-fold-search nil)
+ '(ahs-default-range (quote ahs-range-whole-buffer))
+ '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil t)
+ '(ahs-inhibit-face-list nil)
+ '(cider-boot-parameters "cider repl -s wait")
  '(cider-repl-display-help-banner nil)
  '(cljr-warn-on-eval nil)
  '(clojure-indent-style :always-align)
