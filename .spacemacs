@@ -65,6 +65,7 @@ values."
             shell-enable-smart-eshell t)
      shell-scripts
      smex
+     sql
      syntax-checking
      themes-megapack
      user
