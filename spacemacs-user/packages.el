@@ -19,7 +19,6 @@
     ox-reveal
 
     base16-theme
-    solarized-theme
     ))
 
 ;; List of packages to exclude.
@@ -92,8 +91,6 @@
 (defun user/init-clojure-cheatsheet ())
 
 (defun user/init-base16-theme ())
-
-(defun user/init-solarized-theme ())
 
 ;; For each package, define a function user/init-<package-user>
 ;;
