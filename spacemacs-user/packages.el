@@ -38,8 +38,10 @@
     :defer t
     :init
     (progn
-      (setq default-fill-column 80
-            nrepl-log-messages nil
+      (defun clojure-set-column ()
+        (setq fill-column 80))
+
+      (setq nrepl-log-messages nil
             nrepl-hide-special-buffers t
             cider-repl-prompt-function 'cider-repl-prompt-abbreviated
             cider-prompt-for-symbol nil
@@ -47,8 +49,10 @@
             cider-font-lock-dynamically '(macro core function var)
             cider-overlays-use-font-lock t
             cider-repl-toggle-pretty-printing t)
-      (add-hook 'clojure-mode-hook 'turn-on-fci-mode)
-      (add-hook 'clojure-mode-hook 'golden-ratio-mode))
+      (spacemacs/add-all-to-hook 'clojure-mode-hook
+                                 'turn-on-fci-mode
+                                 'golden-ratio-mode
+                                 'clojure-set-column))
     :config
     (progn
 
