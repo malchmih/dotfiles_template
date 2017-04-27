@@ -2,7 +2,7 @@
                   [lein-exec "0.3.6"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.3"]
-                  [com.jakemccrary/lein-test-refresh "0.19.0"]
+                  [com.jakemccrary/lein-test-refresh "0.20.0"]
                   [lein-kibit "0.1.3"]
                   [lein-bikeshed "0.4.1"]
                   [lein-cljfmt "0.5.6"]
