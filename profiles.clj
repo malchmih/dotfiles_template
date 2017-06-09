@@ -3,10 +3,11 @@
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.4"]
                   [com.jakemccrary/lein-test-refresh "0.20.0"]
-                  [lein-kibit "0.1.5"]
                   [lein-bikeshed "0.4.1"]
                   [lein-cljfmt "0.5.6"]
+                  [lein-count "1.0.8"]
                   [lein-hiera "0.9.5"]
+                  [lein-kibit "0.1.5"]
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.2"]
                   [venantius/ultra "0.5.1"]]
@@ -26,4 +27,4 @@
                   "dev-clean" ^{:doc "Run fully clean development repl"}
                   ["-U" "do" "clean" ["repl" ":headless"]]}}
  :repl {:plugins [[cider/cider-nrepl "0.15.0-SNAPSHOT"]
-                  [refactor-nrepl "2.3.0-SNAPSHOT" :upgrade false]]}}
+                  [refactor-nrepl "2.4.0-SNAPSHOT"]]}}
