@@ -379,6 +379,9 @@ This function is called at the very end of Spacemacs initialization."
  '(ahs-inhibit-face-list nil t)
  '(cider-boot-parameters "cider repl -s wait")
  '(cider-repl-display-help-banner nil)
+ '(cljr-libspec-whitelist
+   (quote
+    ("^cljsns" "^slingshot.test" "^monger.joda-time" "^monger.json" "^cljs-time.instant" "^cljs-time.extend" "^transportal.spec" "^transportal.subs")))
  '(cljr-warn-on-eval nil)
  '(clojure-indent-style :always-align)
  '(fill-column 120)
