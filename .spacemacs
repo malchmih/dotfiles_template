@@ -323,7 +323,9 @@ you should place your code here."
 
   (spacemacs/set-leader-keys
     "wc" 'prepare-workspace)
-  )
+
+  (setq web-mode-engines-alist
+        '(("smarty"  . "\\.tpl\\.php\\'"))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
