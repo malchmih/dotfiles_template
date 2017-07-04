@@ -38,19 +38,19 @@ values."
      (clojure :variables
               clojure-enable-fancify-symbols t)
      docker
-     elixir
-     emoji
+     ;; elixir
+     ;; emoji
      emacs-lisp
      evil-cleverparens
      evil-commentary
-     games
+     ;; games
      git
      ;; github
      ;; gtags
      helm
-     (haskell :variables
-              haskell-enable-ghci-ng-support t
-              haskell-process-type 'ghci)
+     ;; (haskell :variables
+     ;;          haskell-enable-ghci-ng-support t
+     ;;          haskell-process-type 'ghci)
      html
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      imenu-list
@@ -58,9 +58,9 @@ values."
      markdown
      (org :variables org-enable-reveal-js-support t)
      php
-     ruby
-     (scala :variables
-            scala-enable-eldoc t)
+     ;; ruby
+     ;; (scala :variables
+     ;;        scala-enable-eldoc t)
      (shell :variables
             shell-default-shell 'multi-term
             shell-enable-smart-eshell t)
@@ -68,7 +68,7 @@ values."
      smex
      sql
      syntax-checking
-     themes-megapack
+     ;; themes-megapack
      user
      xkcd
      yaml
