@@ -4,9 +4,9 @@
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
     ~/.joker: joker
-    ~/.config/fish/config.fish:
-      create: true
-      path: config.fish
+    # ~/.config/fish/config.fish:
+    #   create: true
+    #   path: config.fish
     ~/.ideavimrc: ideavimrc
     ~/.lein/profiles.clj:
       create: true
@@ -15,9 +15,9 @@
       create: true
       path: profile.boot
     ~/.spacemacs: .spacemacs
-    ~/.emacs.d/private/user:
-      create: true
-      path: spacemacs-user/
+    # ~/.emacs.d/private/user:
+    #   create: true
+    #   path: spacemacs-user/
     ~/.sbt/0.13/plugins/plugins.sbt:
       create: true
       path: plugins.sbt

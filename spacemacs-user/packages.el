@@ -52,7 +52,9 @@
       (spacemacs/add-all-to-hook 'clojure-mode-hook
                                  'turn-on-fci-mode
                                  'golden-ratio-mode
-                                 'clojure-set-column))
+                                 'clojure-set-column
+                                 'evil-cleverparens-mode
+                                 'flycheck-mode))
     :config
     (progn
 
@@ -90,7 +92,8 @@
           "sj" 'cider-figwheel-repl
           "sa" 'cider-default-connect
           "sC" 'cider-replicate-connection
-          "hc" 'clojure-cheatsheet)))))
+          "hc" 'clojure-cheatsheet))
+      )))
 
 (defun user/init-clojure-cheatsheet ())
 
