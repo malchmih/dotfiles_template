@@ -26,5 +26,5 @@
                   ["repl" ":headless"]
                   "dev-clean" ^{:doc "Run fully clean development repl"}
                   ["-U" "do" "clean" ["repl" ":headless"]]}}
- :repl {:plugins [[cider/cider-nrepl "0.15.0-SNAPSHOT"]
+ :repl {:plugins [[cider/cider-nrepl "0.15.1-SNAPSHOT"]
                   [refactor-nrepl "2.4.0-SNAPSHOT"]]}}
