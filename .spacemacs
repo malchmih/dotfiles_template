@@ -43,13 +43,13 @@ This function should only modify configuration layer settings."
               cider-repl-prompt-function 'cider-repl-prompt-abbreviated
               cider-repl-toggle-pretty-printing t
               cider-repl-use-pretty-printing t
+              cljr--debug-mode t
               cljr-warn-on-eval nil
               nrepl-hide-special-buffers t
               nrepl-log-messages nil)
      docker
      emacs-lisp
      evil-cleverparens
-     evil-commentary
      git
      helm
      html
@@ -447,6 +447,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(clojure-indent-style :always-align)
+ '(evil-want-Y-yank-to-eol nil)
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
