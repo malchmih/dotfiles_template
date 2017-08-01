@@ -56,7 +56,7 @@ This function should only modify configuration layer settings."
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      javascript
      markdown
-     org
+     ;; org
      php
      shell-scripts
      syntax-checking
