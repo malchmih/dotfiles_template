@@ -4,7 +4,7 @@
                   [jonase/eastwood "0.2.4"]
                   [com.jakemccrary/lein-test-refresh "0.20.0"]
                   [lein-bikeshed "0.4.1"]
-                  [lein-cljfmt "0.5.6"]
+                  [lein-cljfmt "0.5.7"]
                   [lein-count "1.0.8"]
                   [lein-hiera "0.9.5"]
                   [lein-kibit "0.1.5"]
