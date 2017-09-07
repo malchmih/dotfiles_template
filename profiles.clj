@@ -7,7 +7,7 @@
                   [lein-cljfmt "0.5.7"]
                   [lein-count "1.0.8"]
                   [lein-hiera "0.9.5"]
-                  [lein-kibit "0.1.5"]
+                  [lein-kibit "0.1.6-beta2"]
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.2"]
                   [venantius/ultra "0.5.1"]]
