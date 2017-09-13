@@ -37,6 +37,7 @@ This function should only modify configuration layer settings."
      (clojure :variables
               cider-font-lock-dynamically '(macro core function var)
               cider-overlays-use-font-lock t
+              cider-pprint-fn 'fipp
               cider-prompt-for-symbol nil
               cider-repl-display-help-banner nil
               cider-repl-display-in-current-window t
