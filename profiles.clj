@@ -1,4 +1,4 @@
-{:user {:plugins [[lein-ancient "0.6.10"]
+{:user {:plugins [[lein-ancient "0.6.12"]
                   [lein-exec "0.3.6"]
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.4"]
