@@ -58,11 +58,12 @@ This function should only modify configuration layer settings."
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      javascript
      markdown
-     ;; org
+     org
      php
      shell-scripts
      syntax-checking
      sql
+     themes-megapack
      yaml
      )
    ;; List of additional packages that will be installed without being
@@ -70,9 +71,10 @@ This function should only modify configuration layer settings."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(all-the-icons
-                                      material-theme
+                                      clojure-cheatsheet
+                                      doom-themes
                                       flycheck-joker
-                                      clojure-cheatsheet)
+                                      material-theme)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -144,7 +146,9 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(sanityinc-solarized-dark
-                         sanityinc-solarized-light)
+                         sanityinc-solarized-light
+                         doom-one
+                         zenburn)
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -386,7 +390,7 @@ before packages are loaded."
     "wc" 'prepare-workspace)
 
   (setq web-mode-engines-alist
-        '(("smarty"  . "\\.tpl\\.php\\'")))
+        '(("smarty" . "\\.tpl\\.php\\'")))
 
   (spacemacs/add-all-to-hook 'clojure-mode-hook
                              'turn-on-fci-mode
@@ -453,7 +457,7 @@ This function is called at the very end of Spacemacs initialization."
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
-    (wgrep smex ivy-purpose ivy-hydra counsel-projectile counsel swiper ivy godoctor go-rename go-guru go-eldoc company-go go-mode org-category-capture yaml-mode web-beautify sql-indent phpunit phpcbf php-extras php-auto-yasnippets livid-mode skewer-mode js2-refactor js2-mode js-doc insert-shebang ibuffer-projectile flycheck-bashate fish-mode drupal-mode dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat company-tern dash-functional tern company-shell company-php ac-php-core xcscope php-mode coffee-mode clojure-cheatsheet company-quickhelp helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-statistics company clojure-snippets auto-yasnippet ac-ispell auto-complete zenburn-theme web-mode tagedit smeargle slim-mode scss-mode sayid sass-mode pug-mode orgit org-projectile org-present org-pomodoro alert log4e gntp org-download org-brain mmm-mode material-theme markdown-toc markdown-mode magit-gitflow less-css-mode impatient-mode simple-httpd htmlize helm-gitignore helm-css-scss haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip pos-tip flycheck-joker flycheck evil-org evil-magit magit magit-popup git-commit with-editor evil-commentary evil-cleverparens emmet-mode color-theme-sanityinc-solarized clj-refactor inflections edn multiple-cursors paredit yasnippet peg cider-eval-sexp-fu cider seq queue clojure-mode all-the-icons memoize font-lock+ ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose window-purpose imenu-list helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-lion evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav editorconfig dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (doom-themes zonokai-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme exotica-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme wgrep smex ivy-purpose ivy-hydra counsel-projectile counsel swiper ivy godoctor go-rename go-guru go-eldoc company-go go-mode org-category-capture yaml-mode web-beautify sql-indent phpunit phpcbf php-extras php-auto-yasnippets livid-mode skewer-mode js2-refactor js2-mode js-doc insert-shebang ibuffer-projectile flycheck-bashate fish-mode drupal-mode dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat company-tern dash-functional tern company-shell company-php ac-php-core xcscope php-mode coffee-mode clojure-cheatsheet company-quickhelp helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-statistics company clojure-snippets auto-yasnippet ac-ispell auto-complete zenburn-theme web-mode tagedit smeargle slim-mode scss-mode sayid sass-mode pug-mode orgit org-projectile org-present org-pomodoro alert log4e gntp org-download org-brain mmm-mode material-theme markdown-toc markdown-mode magit-gitflow less-css-mode impatient-mode simple-httpd htmlize helm-gitignore helm-css-scss haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flycheck-pos-tip pos-tip flycheck-joker flycheck evil-org evil-magit magit magit-popup git-commit with-editor evil-commentary evil-cleverparens emmet-mode color-theme-sanityinc-solarized clj-refactor inflections edn multiple-cursors paredit yasnippet peg cider-eval-sexp-fu cider seq queue clojure-mode all-the-icons memoize font-lock+ ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-purpose window-purpose imenu-list helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-lion evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav editorconfig dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
