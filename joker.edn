@@ -1,4 +1,3 @@
 {:known-macros [outpace.remote.service/defservice
-                outpace.remote.service/on-status
                 outpace.remote.service/on-request]
  :rules {:if-without-else true}}

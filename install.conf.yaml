@@ -3,7 +3,7 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
-    ~/.joker: joker
+    ~/.joker: joker.edn
     # ~/.config/fish/config.fish:
     #   create: true
     #   path: config.fish
