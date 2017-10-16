@@ -400,7 +400,7 @@ before packages are loaded."
 
   (add-hook 'clojure-mode-hook
             (lambda ()
-              (setq fill-column 80)))
+              (setq fill-column 90)))
 
   (defun cider-project-reset ()
     (interactive)
@@ -454,6 +454,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(clojure-indent-style :always-align)
  '(evil-want-Y-yank-to-eol nil)
+ '(neo-confirm-create-directory (quote off-p))
+ '(neo-confirm-create-file (quote off-p))
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
