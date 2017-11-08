@@ -6,13 +6,13 @@
                   [lein-bikeshed "0.5.0"]
                   [lein-cljfmt "0.5.7"]
                   [lein-count "1.0.8"]
-                  [lein-hiera "0.9.5"]
-                  [lein-kibit "0.1.6-beta2"]
+                  [lein-hiera "1.0.0"]
+                  [lein-kibit "0.1.6"]
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.2"]
-                  [venantius/ultra "0.5.1"]]
+                  [venantius/ultra "0.5.2"]]
         :dependencies [[fipp "0.6.10"]
-                       [mvxcvi/puget "1.0.1"]
+                       [mvxcvi/puget "1.0.2"]
                        [org.clojure/tools.nrepl "0.2.13"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
