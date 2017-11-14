@@ -11,7 +11,7 @@
                   [venantius/yagni "0.1.4"]
                   [quickie "0.4.2"]
                   [venantius/ultra "0.5.2"]]
-        :dependencies [[fipp "0.6.11"]
+        :dependencies [[fipp "0.6.12"]
                        [mvxcvi/puget "1.0.2"]
                        [org.clojure/tools.nrepl "0.2.13"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
