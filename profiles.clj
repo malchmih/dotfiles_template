@@ -3,7 +3,7 @@
                   [lein-try "0.4.3"]
                   [jonase/eastwood "0.2.5"]
                   [com.jakemccrary/lein-test-refresh "0.22.0"]
-                  [lein-bikeshed "0.5.0"]
+                  [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.5.7"]
                   [lein-count "1.0.8"]
                   [lein-hiera "1.0.0"]
