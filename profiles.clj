@@ -5,7 +5,7 @@
                   [com.jakemccrary/lein-test-refresh "0.22.0"]
                   [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.5.7"]
-                  [lein-count "1.0.8"]
+                  [lein-count "1.0.9"]
                   [lein-hiera "1.0.0"]
                   [lein-kibit "0.1.6"]
                   [venantius/yagni "0.1.4"]
