@@ -1,7 +1,7 @@
 {:user {:plugins [[lein-ancient "0.6.15"]
                   [lein-exec "0.3.7"]
                   [lein-try "0.4.3"]
-                  [jonase/eastwood "0.2.5"]
+                  [jonase/eastwood "0.2.6"]
                   [com.jakemccrary/lein-test-refresh "0.22.0"]
                   [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.5.7"]
@@ -30,5 +30,5 @@
                   ["-U" "do" "clean" ["repl" ":headless"]]
                   "deps-dev" ^{:doc "Run lein deps with repl profile"}
                   ["-U" "with-profile" "repl" "deps"]}}
- :repl {:plugins [[cider/cider-nrepl "0.17.0-SNAPSHOT"]
+ :repl {:plugins [[cider/cider-nrepl "0.17.0"]
                   [refactor-nrepl "2.4.0-SNAPSHOT"]]}}
