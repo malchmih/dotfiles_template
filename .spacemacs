@@ -476,7 +476,7 @@ before packages are loaded."
 
   (defun prepare-workspace ()
     (interactive)
-    (spacemacs/layout-double-columns)
+    (split-window-right)
     (neotree-find-project-root)
     (winum-select-window-1)
     (split-window-below)
