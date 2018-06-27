@@ -477,7 +477,6 @@ before packages are loaded."
   (defun prepare-workspace ()
     (interactive)
     (split-window-right)
-    (neotree-find-project-root)
     (winum-select-window-1)
     (split-window-below)
     (winum-select-window-3)
@@ -502,14 +501,6 @@ before packages are loaded."
   (defun cider-project-reset ()
     (interactive)
     (cider-interactive-eval "(dev/reset)"))
-
-  (defun cider-figwheel-repl ()
-    (interactive)
-    (save-some-buffers)
-    (with-current-buffer (cider-current-repl)
-      (goto-char (point-max))
-      (insert "(cljs-repl)")
-      (cider-repl-return)))
 
   (defun cider-dev ()
     (interactive)
