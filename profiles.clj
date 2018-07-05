@@ -1,7 +1,7 @@
 {:user {:plugins [[lein-ancient "0.6.15"]
                   [lein-exec "0.3.7"]
                   [lein-try "0.4.3"]
-                  [jonase/eastwood "0.2.6"]
+                  [jonase/eastwood "0.2.7"]
                   [com.jakemccrary/lein-test-refresh "0.22.0"]
                   [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.5.7"]
