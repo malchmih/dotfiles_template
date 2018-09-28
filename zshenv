@@ -12,6 +12,6 @@ case `uname` in
         alias up='bubu && cd ~/.emacs.d/ && gl && mas upgrade && softwareupdate -i -a && cd -';
         ;;
     Linux)
-        alias up='agud -y && aga -y && agar -y && cd ~/.emacs.d/ && gl && cd -';
+        alias up='agud -y && aga -y && agar -y && sudo snap refresh && cd ~/.emacs.d/ && gl && cd -';
         ;;
 esac
