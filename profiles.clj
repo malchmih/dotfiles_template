@@ -1,7 +1,7 @@
 {:user {:plugins [[lein-ancient "0.6.15"]
                   [lein-exec "0.3.7"]
                   [lein-try "0.4.3"]
-                  [jonase/eastwood "0.2.9"]
+                  [jonase/eastwood "0.3.3"]
                   [com.jakemccrary/lein-test-refresh "0.23.0"]
                   [lein-bikeshed "0.5.1"]
                   [lein-cljfmt "0.6.1"]
@@ -11,7 +11,7 @@
                   [venantius/yagni "0.1.6"]
                   [quickie "0.4.2"]
                   [venantius/ultra "0.5.2"]]
-        :dependencies [[fipp "0.6.12"]
+        :dependencies [[fipp "0.6.13"]
                        [mvxcvi/puget "1.0.2"]
                        [nrepl "0.4.5"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
