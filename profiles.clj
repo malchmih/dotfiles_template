@@ -11,8 +11,8 @@
                   [venantius/yagni "0.1.6"]
                   [quickie "0.4.2"]
                   [venantius/ultra "0.5.2"]]
-        :dependencies [[fipp "0.6.13"]
-                       [mvxcvi/puget "1.0.2"]
+        :dependencies [[fipp "0.6.14"]
+                       [mvxcvi/puget "1.0.3"]
                        [nrepl "0.4.5"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
