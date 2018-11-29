@@ -4,7 +4,7 @@
                   [jonase/eastwood "0.3.3"]
                   [com.jakemccrary/lein-test-refresh "0.23.0"]
                   [lein-bikeshed "0.5.1"]
-                  [lein-cljfmt "0.6.1"]
+                  [lein-cljfmt "0.6.2"]
                   [lein-count "1.0.9"]
                   [lein-hiera "1.0.0"]
                   [lein-kibit "0.1.6"]
@@ -13,7 +13,7 @@
                   [venantius/ultra "0.5.2"]]
         :dependencies [[fipp "0.6.14"]
                        [mvxcvi/puget "1.0.3"]
-                       [nrepl "0.4.5"]]
+                       [nrepl "0.5.0"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
                    ["ancient" "check-profiles" ":all" ":check-clojure"]
