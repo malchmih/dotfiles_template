@@ -13,7 +13,7 @@
                   [venantius/ultra "0.5.2"]]
         :dependencies [[fipp "0.6.14"]
                        [mvxcvi/puget "1.0.3"]
-                       [nrepl "0.5.1"]]
+                       [nrepl "0.5.2"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
                    ["ancient" "check-profiles" ":all" ":check-clojure"]
