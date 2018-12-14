@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp -*-
+;; -*- mode: emacs-lisp; lexical-binding: t -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
@@ -32,46 +32,47 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layer-path '()
 
    ;; List of configuration layers to load.
-   dotspacemacs-configuration-layers '((auto-completion :variables
-                                                        auto-completion-enable-snippets-in-popup t
-                                                        auto-completion-enable-sort-by-usage t
-                                                        auto-completion-enable-help-tooltip t)
-                                       (clojure :variables
-                                                cider-font-lock-dynamically '(macro core function var)
-                                                cider-overlays-use-font-lock t
-                                                cider-pprint-fn 'fipp
-                                                cider-prompt-for-symbol nil
-                                                cider-repl-display-help-banner nil
-                                                cider-repl-display-in-current-window t
-                                                cider-repl-prompt-function 'cider-repl-prompt-abbreviated
-                                                cider-repl-toggle-pretty-printing t
-                                                cider-repl-use-pretty-printing t
-                                                cljr--debug-mode t
-                                                cljr-warn-on-eval nil
-                                                clojure-enable-clj-refactor t
-                                                nrepl-hide-special-buffers t
-                                                nrepl-log-messages nil)
-                                       (copy-as-format :variables copy-as-format-default "slack")
-                                       docker
-                                       emacs-lisp
-                                       git
-                                       go
-                                       helm
-                                       html
-                                       (ibuffer :variables ibuffer-group-buffers-by 'projects)
-                                       javascript
-                                       markdown
-                                       org
-                                       php
-                                       react
-                                       shell-scripts
-                                       syntax-checking
-                                       sql
-                                       themes-megapack
-                                       ;; (treemacs :variables
-                                       ;;           treemacs-use-filewatch-mode t
-                                       ;;           treemacs-use-collapsed-directories 3)
-                                       yaml)
+   dotspacemacs-configuration-layers
+   '(
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-help-tooltip t)
+     (clojure :variables
+              cider-font-lock-dynamically '(macro core function var)
+              cider-overlays-use-font-lock t
+              cider-pprint-fn 'fipp
+              cider-prompt-for-symbol nil
+              cider-repl-display-help-banner nil
+              cider-repl-display-in-current-window t
+              cider-repl-prompt-function 'cider-repl-prompt-abbreviated
+              cider-repl-toggle-pretty-printing t
+              cider-repl-use-pretty-printing t
+              cljr--debug-mode t
+              cljr-warn-on-eval nil
+              clojure-enable-clj-refactor t
+              nrepl-hide-special-buffers t
+              nrepl-log-messages nil)
+     (copy-as-format :variables copy-as-format-default "slack")
+     docker
+     emacs-lisp
+     git
+     helm
+     html
+     ;; (ibuffer :variables ibuffer-group-buffers-by 'projects)
+     javascript
+     markdown
+     neotree
+     org
+     php
+     react
+     restclient
+     shell-scripts
+     syntax-checking
+     sql
+     themes-megapack
+     yaml
+     )
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -80,11 +81,13 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(all-the-icons
-                                      clojure-cheatsheet
-                                      doom-themes
-                                      flycheck-joker
-                                      material-theme)
+   dotspacemacs-additional-packages
+   '(
+     all-the-icons
+     doom-themes
+     flycheck-joker
+     material-theme
+     )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -109,6 +112,25 @@ It should only modify the values of Spacemacs settings."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
+   ;; If non-nil then enable support for the portable dumper. You'll need
+   ;; to compile Emacs 27 from source following the instructions in file
+   ;; EXPERIMENTAL.org at to root of the git repository.
+   ;; (default nil)
+   dotspacemacs-enable-emacs-pdumper nil
+
+   ;; File path pointing to emacs 27.1 executable compiled with support
+   ;; for the portable dumper (this is currently the branch pdumper).
+   ;; (default "emacs-27.0.50")
+   dotspacemacs-emacs-pdumper-executable-file "emacs-27.0.50"
+
+   ;; Name of the Spacemacs dump file. This is the file will be created by the
+   ;; portable dumper in the cache directory under dumps sub-directory.
+   ;; To load it when starting Emacs add the parameter `--dump-file'
+   ;; when invoking Emacs 27.1 executable on the command line, for instance:
+   ;;   ./emacs --dump-file=~/.emacs.d/.cache/dumps/spacemacs.pdmp
+   ;; (default spacemacs.pdmp)
+   dotspacemacs-emacs-dumper-dump-file "spacemacs.pdmp"
+
    ;; If non-nil ELPA repositories are contacted via HTTPS whenever it's
    ;; possible. Set it to nil if you have no way to use HTTPS in your
    ;; environment, otherwise it is strongly recommended to let it set to t.
@@ -171,7 +193,7 @@ It should only modify the values of Spacemacs settings."
    ;; Possible values for list-type are:
    ;; `recents' `bookmarks' `projects' `agenda' `todos'.
    ;; List sizes may be nil, in which case
-   ;; `spacemacs-buffer-startup-lists-length' takes effect.
+   ;; `spacemac(custom-set-variables
    dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 7))
 
@@ -188,17 +210,21 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
-                         sanityinc-solarized-dark
-                         sanityinc-solarized-light
-                         doom-one)
+   dotspacemacs-themes
+   '(
+     sanityinc-solarized-dark
+     spacemacs-dark
+     spacemacs-light
+     zenburn
+     doom-one
+     )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
-   ;; `all-the-icons', `custom', `vim-powerline' and `vanilla'. The first three
-   ;; are spaceline themes. `vanilla' is default Emacs mode-line. `custom' is a
-   ;; user defined themes, refer to the DOCUMENTATION.org for more info on how
-   ;; to create your own spaceline theme. Value can be a symbol or list with\
-   ;; additional properties.
+   ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
+   ;; first three are spaceline themes. `doom' is the doom-emacs mode-line.
+   ;; `vanilla' is default Emacs mode-line. `custom' is a user defined themes,
+   ;; refer to the DOCUMENTATION.org for more info on how to create your own
+   ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
 
@@ -243,21 +269,6 @@ It should only modify the values of Spacemacs settings."
    ;; works in the GUI. (default nil)
    dotspacemacs-distinguish-gui-tab nil
 
-   ;; If non-nil `Y' is remapped to `y$' in Evil states. (default nil)
-   dotspacemacs-remap-Y-to-y$ nil
-
-   ;; If non-nil, the shift mappings `<' and `>' retain visual state if used
-   ;; there. (default t)
-   dotspacemacs-retain-visual-state-on-shift t
-
-   ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
-   ;; (default nil)
-   dotspacemacs-visual-line-move-text nil
-
-   ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
-   ;; (default nil)
-   dotspacemacs-ex-substitute-global nil
-
    ;; Name of the default layout (default "Default")
    dotspacemacs-default-layout-name "Default"
 
@@ -287,26 +298,9 @@ It should only modify the values of Spacemacs settings."
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
 
-   ;; If non-nil, `helm' will try to minimize the space it uses. (default nil)
-   dotspacemacs-helm-resize nil
-
-   ;; if non-nil, the helm header is hidden when there is only one source.
-   ;; (default nil)
-   dotspacemacs-helm-no-header nil
-
-   ;; define the position to display `helm', options are `bottom', `top',
-   ;; `left', or `right'. (default 'bottom)
-   dotspacemacs-helm-position 'bottom
-
-   ;; Controls fuzzy matching in helm. If set to `always', force fuzzy matching
-   ;; in all non-asynchronous sources. If set to `source', preserve individual
-   ;; source settings. Else, disable fuzzy matching in all sources.
-   ;; (default 'always)
-   dotspacemacs-helm-use-fuzzy 'always
-
-   ;; If non-nil, the paste transient-state is enabled. While enabled, pressing
-   ;; `p' several times cycles through the elements in the `kill-ring'.
-   ;; (default nil)
+   ;; If non-nil, the paste transient-state is enabled. While enabled, after you
+   ;; paste something, pressing `C-j' and `C-k' several times cycles through the
+   ;; elements in the `kill-ring'. (default nil)
    dotspacemacs-enable-paste-transient-state nil
 
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
@@ -360,7 +354,9 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil show the color guide hint for transient state keys. (default t)
    dotspacemacs-show-transient-state-color-guide t
 
-   ;; If non-nil unicode symbols are displayed in the mode line. (default t)
+   ;; If non-nil unicode symbols are displayed in the mode line.
+   ;; If you use Emacs as a daemon and wants unicode characters only in GUI set
+   ;; the value to quoted `display-graphic-p'. (default t)
    dotspacemacs-mode-line-unicode-symbols t
 
    ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
@@ -402,7 +398,15 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-highlight-delimiters 'all
 
    ;; If non-nil, start an Emacs server if one is not already running.
-   dotspacemacs-enable-server t
+   ;; (default nil)
+   dotspacemacs-enable-server nil
+
+   ;; Set the emacs server socket location.
+   ;; If nil, uses whatever the Emacs default is, otherwise a directory path
+   ;; like \"~/.emacs.d/server\". It has no effect if
+   ;; `dotspacemacs-enable-server' is nil.
+   ;; (default nil)
+   dotspacemacs-server-socket-dir nil
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
@@ -452,6 +456,14 @@ It should only modify the values of Spacemacs settings."
    ;; (default nil)
    dotspacemacs-pretty-docs nil))
 
+(defun dotspacemacs/user-env ()
+  "Environment variables setup.
+This function defines the environment variables for your Emacs session. By
+default it calls `spacemacs/load-spacemacs-env' which loads the environment
+variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
+See the header of this file for more information."
+  (spacemacs/load-spacemacs-env))
+
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
@@ -460,17 +472,25 @@ It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   )
 
+(defun dotspacemacs/user-load ()
+  "Library to load while dumping.
+This function is called only while dumping Spacemacs configuration. You can
+`require' or `load' the libraries of your choice that will be included in the
+dump."
+  )
+
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
 This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-
   (require 'flycheck-joker)
   (require 'all-the-icons)
 
   (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
+
+  (setq helm-split-window-inside-p t)
 
   ;; Fixing "C-k" not working with company-completion tooltips
   (add-hook
@@ -550,12 +570,13 @@ before packages are loaded."
   (custom-set-variables
    '(safe-local-variable-values
      (quote
-      ((cider-default-cljs-repl . figwheel)
+      ((cljr-libspec-whitelist "^cljs.core.specs.alpha" "^cljs-time.extend" "^cljs-time.instant" "^cljsjs.moment.locale.ru" "^googlecloud.cloudstorage.storage" "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^transportal.events" "^transportal.interval" "^transportal.intro")
+       (cider-default-cljs-repl . figwheel)
        (helm-ag-use-agignore t)
-       (cljr-libspec-whitelist "^cljs.core.specs.alpha" "^cljs-time.extend" "^cljs-time.instant" "^cljsjs.moment.locale.ru" "^googlecloud.cloudstorage.storage" "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^transportal.events" "^transportal.interval" "^transportal.intro")
-       (cljr-after-warming-ast-cache-hook . (lambda (&rest ignore)
-                                              (interactive)
-                                              (cider-interactive-eval "(dev/reset)")))
+       (cljr-after-warming-ast-cache-hook lambda
+                                          (&rest ignore)
+                                          (interactive)
+                                          (cider-interactive-eval "(dev/reset)"))
        (javascript-backend . tern)
        (javascript-backend . lsp)
        (go-backend . go-mode)
@@ -569,18 +590,4 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (neotree zenburn-theme zen-and-art-theme yasnippet-snippets yaml-mode ws-butler winum white-sand-theme which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme treemacs-projectile treemacs-evil toxi-theme toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit symon sunny-day-theme sublime-themes subatomic256-theme subatomic-theme string-inflection sql-indent spaceline-all-the-icons spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle slim-mode seti-theme scss-mode sass-mode rjsx-mode reverse-theme restart-emacs rebecca-theme rainbow-delimiters railscasts-theme purple-haze-theme pug-mode professional-theme prettier-js popwin planet-theme phpunit phpcbf php-extras php-auto-yasnippets phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el password-generator paradox overseer orgit organic-green-theme org-projectile org-present org-pomodoro org-mime org-download org-bullets org-brain open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme nameless mustang-theme move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc majapahit-theme magit-svn magit-gitflow madhat2r-theme macrostep lush-theme lorem-ipsum livid-mode linum-relative link-hint light-soap-theme less-css-mode kaolin-themes json-navigator js2-refactor js-doc jbeans-theme jazz-theme ir-black-theme insert-shebang inkpot-theme indent-guide impatient-mode ibuffer-projectile hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-mode-manager helm-make helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md gandalf-theme fuzzy font-lock+ flycheck-pos-tip flycheck-joker flycheck-bashate flx-ido flatui-theme flatland-theme fish-mode fill-column-indicator farmhouse-theme fancy-battery eziam-theme eyebrowse expand-region exotica-theme evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu espresso-theme emmet-mode elisp-slime-nav editorconfig dumb-jump drupal-mode dracula-theme dotenv-mode doom-themes doom-modeline dockerfile-mode docker django-theme diminish define-word darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme counsel-projectile copy-as-format company-web company-tern company-statistics company-shell company-quickhelp company-php company-go column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clojure-snippets clojure-cheatsheet clj-refactor clean-aindent-mode cider-eval-sexp-fu cherry-blossom-theme centered-cursor-mode busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme auto-yasnippet auto-highlight-symbol auto-compile apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  )
