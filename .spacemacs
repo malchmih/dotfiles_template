@@ -570,7 +570,7 @@ before packages are loaded."
   (custom-set-variables
    '(safe-local-variable-values
      (quote
-      ((cljr-libspec-whitelist "^cljs.core.specs.alpha" "^cljs-time.extend" "^cljs-time.instant" "^cljsjs.moment.locale.ru" "^googlecloud.cloudstorage.storage" "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^transportal.events" "^transportal.interval" "^transportal.intro")
+      ((cljr-libspec-whitelist "^cljs.core.specs.alpha" "^cljs-time.extend" "^cljs-time.instant" "^googlecloud.cloudstorage.storage" "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^transportal.events" "^transportal.interval" "^transportal.intro")
        (cider-default-cljs-repl . figwheel)
        (helm-ag-use-agignore t)
        (cljr-after-warming-ast-cache-hook lambda
