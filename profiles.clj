@@ -1,7 +1,7 @@
 {:user {:plugins [[lein-ancient "0.6.15"]
                   [jonase/eastwood "0.3.4"]
                   [lein-bikeshed "0.5.1"]
-                  [lein-cljfmt "0.6.3"]
+                  [lein-cljfmt "0.6.4"]
                   [lein-count "1.0.9"]
                   [lein-hiera "1.0.0"]
                   [lein-kibit "0.1.6"]]
