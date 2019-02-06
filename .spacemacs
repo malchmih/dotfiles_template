@@ -551,6 +551,7 @@ before packages are loaded."
     (spacemacs/set-leader-keys-for-major-mode m
       "j" 'cider-project-reset
       "J" 'cider-dev
+      "el" 'cider-inspect-last-result
       "sj" 'cider-connect-sibling-cljs
       "sa" 'cider-default-connect
       "sC" 'cider-replicate-connection
