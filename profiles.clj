@@ -5,7 +5,7 @@
                   [lein-count "1.0.9"]
                   [lein-hiera "1.0.0"]
                   [lein-kibit "0.1.6"]]
-        :dependencies [[nrepl "0.5.3"]]
+        :dependencies [[nrepl "0.6.0"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
                    ["ancient" "check-profiles" ":all" ":check-clojure"]
@@ -22,5 +22,5 @@
                   ["-U" "do" "clean" ["repl" ":headless"]]
                   "deps-dev" ^{:doc "Run lein deps with repl profile"}
                   ["-U" "with-profile" "repl" "deps"]}}
- :repl {:plugins [[cider/cider-nrepl "0.20.0"]
+ :repl {:plugins [[cider/cider-nrepl "0.21.0"]
                   [refactor-nrepl "2.4.0"]]}}
