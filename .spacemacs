@@ -547,6 +547,15 @@ before packages are loaded."
         (plist-put :port port)
         (cider-connect))))
 
+  (defun cider-connect-remote ()
+    (interactive)
+    (let* ((host "localhost")
+           (port "5555"))
+      (thread-first ()
+        (plist-put :host host)
+        (plist-put :port port)
+        (cider-connect))))
+
   (dolist (m '(clojure-mode))
     (spacemacs/set-leader-keys-for-major-mode m
       "j" 'cider-project-reset
@@ -554,6 +563,7 @@ before packages are loaded."
       "el" 'cider-inspect-last-result
       "sj" 'cider-connect-sibling-cljs
       "sa" 'cider-default-connect
+      "sA" 'cider-connect-remote
       "sC" 'cider-replicate-connection
       "hc" 'clojure-cheatsheet))
 
