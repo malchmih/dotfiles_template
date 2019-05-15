@@ -541,7 +541,7 @@ before packages are loaded."
   (defun cider-default-connect ()
     (interactive)
     (let* ((host "localhost")
-           (port (string-to-int (car (cdr (car (cider--infer-ports host nil)))))))
+           (port (string-to-number (car (cdr (car (cider--infer-ports host nil)))))))
       (thread-first ()
         (plist-put :host host)
         (plist-put :port port)
