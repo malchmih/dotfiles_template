@@ -7,3 +7,5 @@ nnoremap <space>ff :action GotoFile<cr>
 nnoremap <space>fc :action GotoClass<cr>
 nnoremap <space>fs :action GotoSymbol<cr>
 nnoremap <space>fn :action GotoNamespace<cr>
+
+set ideajoin
