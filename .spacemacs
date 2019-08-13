@@ -51,6 +51,7 @@ This function should only modify configuration layer settings."
               cljr--debug-mode t
               cljr-warn-on-eval nil
               clojure-enable-clj-refactor t
+              clojure-toplevel-inside-comment-form t
               nrepl-hide-special-buffers t
               nrepl-log-messages nil)
      (copy-as-format :variables copy-as-format-default "slack")
