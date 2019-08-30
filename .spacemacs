@@ -517,10 +517,6 @@ before packages are loaded."
                              'evil-cleverparens-mode
                              'flycheck-mode)
 
-  (add-hook 'clojure-mode-hook
-            (lambda ()
-              (setq fill-column 90)))
-
   (defun cider-project-reset ()
     (interactive)
     (cider-interactive-eval "(dev/reset)"))
