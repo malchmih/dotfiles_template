@@ -8,11 +8,14 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 export ANDROID_HOME=/usr/local/share/android-sdk
 
-case `uname` in
+case `lsb_release -i -s | tr '[:upper:]' '[:lower:]'` in
     Darwin)
         alias up='bubu && cd ~/.emacs.d/ && gl && mas upgrade && softwareupdate -i -a && cd -';
         ;;
-    Linux)
+    ubuntu*)
         alias up='agud -y && aga -y && agar -y && sudo snap refresh && cd ~/.emacs.d/ && gl && cd -';
+        ;;
+    manjaro*)
+        alias up='sudo pacman -Syu && cd ~/.emacs.d/ && gl && cd -';
         ;;
 esac
