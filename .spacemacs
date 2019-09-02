@@ -50,6 +50,7 @@ This function should only modify configuration layer settings."
               cljr--debug-mode t
               cljr-warn-on-eval nil
               clojure-enable-clj-refactor t
+              clojure-enable-linters 'clj-kondo
               clojure-toplevel-inside-comment-form t
               nrepl-hide-special-buffers t
               nrepl-log-messages nil)
@@ -83,8 +84,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(all-the-icons
      doom-themes
-     flycheck-joker
-     flycheck-clj-kondo
      material-theme)
 
    ;; A list of packages that cannot be updated.
@@ -561,19 +560,6 @@ before packages are loaded."
   (dolist (m '(clojure-mode clojurescript-mode))
     (spacemacs/set-leader-keys-for-major-mode m
       "gk" 'cider-find-keyword))
-
-  (use-package clojure-mode
-    :ensure t
-    :config
-    (require 'flycheck-joker)
-    (require 'flycheck-clj-kondo)
-    (dolist (checker '(clj-kondo-clj clj-kondo-cljs clj-kondo-cljc clj-kondo-edn))
-      (setq flycheck-checkers (cons checker (delq checker flycheck-checkers))))
-    (dolist (checkers '((clj-kondo-clj . clojure-joker)
-                        (clj-kondo-cljs . clojurescript-joker)
-                        (clj-kondo-cljc . clojure-joker)
-                        (clj-kondo-edn . edn-joker)))
-      (flycheck-add-next-checker (car checkers) (cons 'error (cdr checkers)))))
 
   (setq-default
     clojure-indent-style :always-align
