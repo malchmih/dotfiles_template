@@ -22,5 +22,5 @@
                   ["-U" "do" "clean" ["repl" ":headless"]]
                   "deps-dev" ^{:doc "Run lein deps with repl profile"}
                   ["-U" "with-profile" "repl" "deps"]}}
- :repl {:plugins [[cider/cider-nrepl "0.22.0"]
+ :repl {:plugins [[cider/cider-nrepl "0.22.2"]
                   [refactor-nrepl "2.5.0-SNAPSHOT"]]}}
