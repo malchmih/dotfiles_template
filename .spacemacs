@@ -566,7 +566,11 @@ before packages are loaded."
     evil-want-Y-yank-to-eol nil
     neo-confirm-create-directory (quote off-p)
     neo-confirm-create-file (quote off-p)
-    neo-theme (quote icons)))
+    neo-theme (quote icons))
+
+  (with-eval-after-load 'clojure-mode
+    (define-clojure-indent
+      (facts 1))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
