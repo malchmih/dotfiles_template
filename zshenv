@@ -14,6 +14,6 @@ case `lsb_release -i -s | tr '[:upper:]' '[:lower:]'` in
         alias up='agud -y && aga -y && agar -y && sudo snap refresh && cd ~/.emacs.d/ && gl && cd -';
         ;;
     manjaro*)
-        alias up='sudo pacman -Syu && paccache -rvk3 && cd ~/.emacs.d/ && gl && cd -';
+        alias up='yay -Syu && paccache -rvk3 && cd ~/.emacs.d/ && gl && cd -';
         ;;
 esac
