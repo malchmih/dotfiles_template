@@ -65,13 +65,13 @@ This function should only modify configuration layer settings."
      markdown
      neotree
      org
-     php
+     ;; php
      react
      restclient
      shell-scripts
      syntax-checking
      sql
-     themes-megapack
+     ;; themes-megapack
      yaml)
 
    ;; List of additional packages that will be installed without being
