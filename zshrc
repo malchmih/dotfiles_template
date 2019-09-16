@@ -69,6 +69,7 @@ plugins=(git common-aliases zsh-completions)
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
 
 autoload -U compinit && compinit
 
