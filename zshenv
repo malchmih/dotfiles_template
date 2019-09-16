@@ -17,3 +17,5 @@ case `lsb_release -i -s | tr '[:upper:]' '[:lower:]'` in
         alias up='yay && yay -Yc && cd ~/.emacs.d/ && gl && cd -';
         ;;
 esac
+
+alias j=just
