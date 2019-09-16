@@ -84,7 +84,9 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(all-the-icons
      doom-themes
-     material-theme)
+     flycheck-joker
+     material-theme
+     )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -567,6 +569,19 @@ before packages are loaded."
     neo-confirm-create-directory (quote off-p)
     neo-confirm-create-file (quote off-p)
     neo-theme (quote icons))
+
+  (use-package clojure-mode
+    :ensure t
+    :config
+    (require 'flycheck-joker)
+    (require 'flycheck-clj-kondo)
+    (dolist (checker '(clj-kondo-clj clj-kondo-cljs clj-kondo-cljc clj-kondo-edn))
+      (setq flycheck-checkers (cons checker (delq checker flycheck-checkers))))
+    (dolist (checkers '((clj-kondo-clj . clojure-joker)
+                        (clj-kondo-cljs . clojurescript-joker)
+                        (clj-kondo-cljc . clojure-joker)
+                        (clj-kondo-edn . edn-joker)))
+      (flycheck-add-next-checker (car checkers) (cons 'error (cdr checkers)))))
 
   (with-eval-after-load 'clojure-mode
     (define-clojure-indent
