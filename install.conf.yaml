@@ -8,6 +8,9 @@
     ~/.lein/profiles.clj:
       create: true
       path: profiles.clj
+    ~/.clojure/deps.edn:
+      create: true
+      path: deps.edn
     ~/.spacemacs: .spacemacs
 - shell:
   - [git submodule update --init --recursive, Installing/updating submodules]
