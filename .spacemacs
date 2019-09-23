@@ -556,7 +556,7 @@ before packages are loaded."
       "sa" 'cider-default-connect
       "sA" 'cider-connect-remote
       "sC" 'cider-replicate-connection
-      "hc" 'clojure-cheatsheet))
+      "rsn" 'clojure-sort-ns))
 
   (dolist (m '(clojure-mode clojurescript-mode))
     (spacemacs/set-leader-keys-for-major-mode m
