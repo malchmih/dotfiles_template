@@ -1,4 +1,4 @@
 {:aliases {:unused-vars {:extra-deps {clj-kondo/tools {:git/url "https://github.com/borkdude/clj-kondo"
-                                                       :sha "6de7e1d7b7a7e7b89f0006b7e38a9e68283aaa86"
+                                                       :sha "dc388b01fdc29eb965e126ae9ffc229657faa333"
                                                        :deps/root "analysis"}}
                          :main-opts ["-m" "clj-kondo.tools.unused-vars"]}}}
