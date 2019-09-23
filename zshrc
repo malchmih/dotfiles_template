@@ -64,11 +64,14 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases zsh-completions)
+plugins=(brew common-aliases git nvm zsh-completions)
 
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
+
+source /usr/share/nvm/install-nvm-exec
+
 source <(kubectl completion zsh)
 
 autoload -U compinit && compinit
