@@ -555,12 +555,12 @@ before packages are loaded."
       "sj" 'cider-connect-sibling-cljs
       "sa" 'cider-default-connect
       "sA" 'cider-connect-remote
-      "sC" 'cider-replicate-connection
-      "rsn" 'clojure-sort-ns))
+      "sC" 'cider-replicate-connection))
 
   (dolist (m '(clojure-mode clojurescript-mode))
     (spacemacs/set-leader-keys-for-major-mode m
-      "gk" 'cider-find-keyword))
+      "gk" 'cider-find-keyword
+      "rsn" 'clojure-sort-ns))
 
   (setq-default
     clojure-indent-style :always-align
