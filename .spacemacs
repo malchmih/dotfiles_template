@@ -506,7 +506,8 @@ before packages are loaded."
     (split-window-below))
 
   (spacemacs/set-leader-keys
-    "wc" 'prepare-workspace)
+    "wc" 'prepare-workspace
+    "en" 'flycheck-next-error)
 
   (setq web-mode-engines-alist
         '(("smarty" . "\\.tpl\\.php\\'")))
