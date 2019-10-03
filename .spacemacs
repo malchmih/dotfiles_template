@@ -38,6 +38,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t)
      (clojure :variables
+              cider-enhanced-cljs-completion-p nil
               cider-font-lock-dynamically '(macro core function var)
               cider-overlays-use-font-lock t
               cider-pprint-fn 'fipp
