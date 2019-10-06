@@ -38,7 +38,7 @@ This function should only modify configuration layer settings."
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t)
      (clojure :variables
-              cider-enhanced-cljs-completion-p nil
+              ;; cider-enhanced-cljs-completion-p nil
               cider-font-lock-dynamically '(macro core function var)
               cider-overlays-use-font-lock t
               cider-pprint-fn 'fipp
@@ -85,7 +85,6 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(all-the-icons
      doom-themes
-     flycheck-joker
      material-theme
      )
 
@@ -571,19 +570,6 @@ before packages are loaded."
     neo-confirm-create-file (quote off-p)
     neo-theme (quote icons))
 
-  (use-package clojure-mode
-    :ensure t
-    :config
-    (require 'flycheck-joker)
-    (require 'flycheck-clj-kondo)
-    (dolist (checker '(clj-kondo-clj clj-kondo-cljs clj-kondo-cljc clj-kondo-edn))
-      (setq flycheck-checkers (cons checker (delq checker flycheck-checkers))))
-    (dolist (checkers '((clj-kondo-clj . clojure-joker)
-                        (clj-kondo-cljs . clojurescript-joker)
-                        (clj-kondo-cljc . clojure-joker)
-                        (clj-kondo-edn . edn-joker)))
-      (flycheck-add-next-checker (car checkers) (cons 'error (cdr checkers)))))
-
   (with-eval-after-load 'clojure-mode
     (define-clojure-indent
       (facts 1))))
@@ -606,15 +592,10 @@ This function is called at the very end of Spacemacs initialization."
  '(safe-local-variable-values
    (quote
     ((cljr-libspec-whitelist "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^honeysql-postgres.format")
-     (cider-default-cljs-repl . figwheel)
      (cljr-libspec-whitelist "^cljs.core.specs.alpha" "^cljs-time.extend" "^cljs-time.instant" "^googlecloud.cloudstorage.storage" "^day8.re-frame.async-flow-fx" "^day8.re-frame.http-fx" "^transportal.events" "^transportal.interval" "^transportal.intro")
      (cider-shadow-default-options . ":app")
      (cider-default-cljs-repl . shadow)
      (helm-ag-use-agignore t)
-     (cljr-after-warming-ast-cache-hook lambda
-                                        (&rest ignore)
-                                        (interactive)
-                                        (cider-interactive-eval "(dev/reset)"))
      (cljr-after-warming-ast-cache-hook lambda
                                         (&rest ignore)
                                         (interactive)
