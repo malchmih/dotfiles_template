@@ -498,7 +498,6 @@ before packages are loaded."
   (defun prepare-workspace ()
     (interactive)
     (split-window-right)
-    ;; (treemacs)
     (neotree-find-project-root)
     (winum-select-window-1)
     (split-window-below)
@@ -520,15 +519,7 @@ before packages are loaded."
 
   (defun cider-project-reset ()
     (interactive)
-    (cider-interactive-eval "(dev/reset)"))
-
-  (defun cider-dev ()
-    (interactive)
-    (save-some-buffers)
-    (with-current-buffer (cider-current-repl)
-      (goto-char (point-max))
-      (insert "(dev)")
-      (cider-repl-return)))
+    (cider-interactive-eval "(user/clj-reset!)"))
 
   (defun cider-default-connect ()
     (interactive)
@@ -551,7 +542,6 @@ before packages are loaded."
   (dolist (m '(clojure-mode))
     (spacemacs/set-leader-keys-for-major-mode m
       "j" 'cider-project-reset
-      "J" 'cider-dev
       "el" 'cider-inspect-last-result
       "sj" 'cider-connect-sibling-cljs
       "sa" 'cider-default-connect
@@ -599,8 +589,8 @@ This function is called at the very end of Spacemacs initialization."
      (cljr-after-warming-ast-cache-hook lambda
                                         (&rest ignore)
                                         (interactive)
-                                        (cider-interactive-eval "(server/start!)")
-                                        (cider-interactive-eval "(dev/reset)"))))))
+                                        (cider-interactive-eval "(cljs-server-start!)")
+                                        (cider-interactive-eval "(clj-reset!)"))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
