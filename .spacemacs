@@ -85,8 +85,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(all-the-icons
      doom-themes
-     material-theme
-     )
+     kaocha-runner
+     material-theme)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -546,7 +546,12 @@ before packages are loaded."
       "sj" 'cider-connect-sibling-cljs
       "sa" 'cider-default-connect
       "sA" 'cider-connect-remote
-      "sC" 'cider-replicate-connection))
+      "sC" 'cider-replicate-connection
+      "kt" 'kaocha-runner-run-test-at-point
+      "kr" 'kaocha-runner-run-tests
+      "ka" 'kaocha-runner-run-all-tests
+      "kw" 'kaocha-runner-show-warnings
+      "kh" 'kaocha-runner-hide-windows))
 
   (dolist (m '(clojure-mode clojurescript-mode))
     (spacemacs/set-leader-keys-for-major-mode m
