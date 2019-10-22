@@ -5,7 +5,8 @@
                   [lein-count "1.0.9"]
                   [lein-hiera "1.1.0"]
                   [lein-kibit "0.1.7"]]
-        :dependencies [[nrepl "0.6.0"]]
+        :dependencies [[criterium "0.4.5"]
+                       [nrepl "0.6.0"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
                   ["do"
                    ["ancient" "check-profiles" ":all" ":check-clojure"]
