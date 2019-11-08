@@ -49,6 +49,7 @@ This function should only modify configuration layer settings."
               cider-repl-toggle-pretty-printing t
               cider-repl-use-pretty-printing t
               cljr--debug-mode t
+              cljr-populate-artifact-cache-on-startup nil
               cljr-warn-on-eval nil
               clojure-enable-clj-refactor t
               clojure-enable-linters 'clj-kondo
