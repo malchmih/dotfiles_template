@@ -1,10 +1,6 @@
 {:user {:plugins [[lein-ancient "0.6.15"]
-                  [jonase/eastwood "0.3.6"]
-                  [lein-bikeshed "0.5.2"]
-                  [lein-cljfmt "0.6.5"]
                   [lein-count "1.0.9"]
-                  [lein-hiera "1.1.0"]
-                  [lein-kibit "0.1.7"]]
+                  [lein-hiera "1.1.0"]]
         :dependencies [[criterium "0.4.5"]
                        [nrepl "0.6.0"]]
         :aliases {"anc" ^{:doc "Check all dependencies for updates"}
