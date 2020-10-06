@@ -1,4 +1,4 @@
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH=".:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/malch/utils/google-cloud-sdk/path.zsh.inc' ]; then . '/home/malch/utils/google-cloud-sdk/path.zsh.inc'; fi
