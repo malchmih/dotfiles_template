@@ -64,7 +64,7 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew common-aliases git nvm zsh-completions ssh-agent vi-mode gradle-completion)
+plugins=(brew common-aliases git nvm zsh-completions ssh-agent vi-mode gradle-completion docker-compose)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
