@@ -1,5 +1,10 @@
 export PATH=".:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Read local enviroment variables
+if [[ -r ~/.zshenv_local ]]; then
+    . ~/.zshenv_local
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/malch/utils/google-cloud-sdk/path.zsh.inc' ]; then . '/home/malch/utils/google-cloud-sdk/path.zsh.inc'; fi
 
