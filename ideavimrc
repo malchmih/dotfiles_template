@@ -9,3 +9,4 @@ nnoremap <space>fs :action GotoSymbol<cr>
 nnoremap <space>fn :action GotoNamespace<cr>
 
 set ideajoin
+set clipboard+=unnamed
